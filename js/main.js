@@ -50,5 +50,12 @@
             $('body, html').animate({ scrollTop: 0 }, 600);
         });
     }
+	
+	//insta
+	if($("#instagram").length) {
+        require(['/js/photo.js', '/vendor/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
+            obj.init();
+        });
+    }
 
 })(jQuery);
