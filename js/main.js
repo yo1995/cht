@@ -52,7 +52,7 @@
     }
 	
 	//insta
-	if($("#instagram").length) {
+	if($('.instagram').length) {
         require(['/js/photo.js', '/vendor/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
             obj.init();
         });
