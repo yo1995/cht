@@ -1,42 +1,36 @@
-define([], function () {
-	return {
-		page: 1,
-		offset: 20,
-		init: function () {
-			var that = this;
-			$.getJSON("/gallery/data.json", function (data) {
-				that.render(that.page, data);
-				that.scroll(data);
-			});
-		},
-
-		render: function (page, data) {
-			var begin = (page - 1) * this.offset;
-			var end = page * this.offset;
-			if (begin >= data.length) return;
-			var html, li = "";
-			for (var i = begin; i < end && i < data.length; i++) {
-				li += '<li><div class="img-box">' + '<a class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + data[i] + '"></a>' + '<img lazy-src="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + data[i] + '" />' + '</li>';
-			}
-
-			$(".img-box-ul").append(li);
-			$(".img-box-ul").lazyload();
-			$("a[rel=example_group]").fancybox();
-		},
-
-		scroll: function (data) {
-			var that = this;
-			$(window).scroll(function() {
-				var windowPageYOffset = window.pageYOffset;
-				var windowPageYOffsetAddHeight = windowPageYOffset + window.innerHeight;
-				var sensitivity = 0;
-
-				var offsetTop = $(".instagram").offset().top + $(".instagram").height();
-
-				if (offsetTop >= windowPageYOffset && offsetTop < windowPageYOffsetAddHeight + sensitivity) {
-					that.render(++that.page, data);
-				}
-			})
-		}
-	}
-})
+define([],
+function() {
+    return {
+        page: 1,
+        offset: 20,
+        init: function() {
+            var t = this;
+            $.getJSON("/cht/gallery/data.json",
+            function(e) {
+                t.render(t.page, e),
+                t.scroll(e)
+            })
+        },
+        render: function(t, e) {
+            var o = (t - 1) * this.offset,
+            n = t * this.offset;
+            if (! (o >= e.length)) {
+                for (var a = "",
+                i = o; i < n && i < e.length; i++) a += '<li><div class="img-box"><a class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"></a><img lazy-src="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '" /></li>';
+                $(".img-box-ul").append(a),
+                $(".img-box-ul").lazyload(),
+                $("a[rel=example_group]").fancybox()
+            }
+        },
+        scroll: function(t) {
+            var e = this;
+            $(window).scroll(function() {
+                var o = window.pageYOffset,
+                n = o + window.innerHeight,
+                a = 0,
+                i = $(".instagram").offset().top + $(".instagram").height();
+                i >= o && i < n + a && e.render(++e.page, t)
+            })
+        }
+    }
+});

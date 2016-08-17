@@ -53,7 +53,11 @@
 	
 	//insta
 	if($('.instagram').length) {
-        require(['/js/photo.js', '/vendor/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
+        var bp = document.createElement("script");
+		bp.src = "/cht/js/photo.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s),
+		require(['/cht/js/photo.js', '/cht/js/jquery.lazyload.js', '/cht/vendor/fancybox/jquery.fancybox.js'], function(obj) {
             obj.init();
         });
     }
