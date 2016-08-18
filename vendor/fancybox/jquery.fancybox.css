@@ -268,3 +268,15 @@
 		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 }
+
+ul li {
+	float: left;
+	list-style-type:none;
+	margin: 18px;
+}
+
+#imgtxt p{
+	text-align: center;
+	font-size: 16px;
+    font-family: Helvetica, sans-serif, 微软雅黑;
+}
