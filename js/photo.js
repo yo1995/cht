@@ -19,7 +19,7 @@ function() {
                 for (var a = "",
                 i = o; i < n && i < e.length; i++) a += '<li><div class="img-box"  id="imgtxt"><a class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"/></a></div><div id="imgtxt"><p>' + e[i].replace(reg,'') + '</p></div></li>';
                 $(".img-box-ul").append(a);
-                $(".img-box-ul").lazyload();
+                //$(".img-box-ul").lazyload();此处有待debug
 				changeSize();
                 $("a[rel=example_group]").fancybox()
             }
