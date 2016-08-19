@@ -2,7 +2,7 @@ define([],
 function() {
     return {
         page: 1,
-        offset: 10, //ÿ�μ���ͼƬ��
+        offset: 8, //ÿ�μ���ͼƬ��
         init: function() {
             var t = this;
             $.getJSON("/cht/awards/data.json",
@@ -15,9 +15,10 @@ function() {
             var o = (t - 1) * this.offset,
             n = t * this.offset;
 			var reg = /\.\w+$/; 
+			var spc = /\s+/g;
             if (! (o >= e.length)) {
                 for (var a = "",
-                i = o; i < n && i < e.length; i++) a += '</div><li><div class="img-box" id="imgtxt"><a title=' + e[i].replace(reg,'').replace(' ','&nbsp;') + ' class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/awards/' + e[i] + '"><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/awards/' + e[i] + '"/></a></div></li>';
+                i = o; i < n && i < e.length; i++) a += '</div><li><div class="img-box" id="imgtxt"><a title=' + e[i].replace(reg,'').replace(spc,'&nbsp;') + ' class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/awards/' + e[i] + '"><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/awards/' + e[i] + '"/></a></div></li>';
                 $(".img-box-ul").append(a);
                 //$(".img-box-ul").lazyload();�˴��д�debug
 				changeSize();

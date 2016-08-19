@@ -159,11 +159,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                2
+                3
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                2
+                6
                 <span>tags</span>
             </div>
         </div>
@@ -180,7 +180,7 @@
                     </td>
                     
                     <td>
-                        <a href="https://cn.linkedin.com/in/ting-chen-402bab122/" target="_blank" title="linkedin" class=tooltip>
+                        <a href="https://www.linkedin.com/in/ting-chen-402bab122/" target="_blank" title="linkedin" class=tooltip>
                             <i class="fa fa-linkedin"></i>
                         </a>
                     </td>
@@ -240,7 +240,7 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/cht/categories/101s/">101s</a>
+        <a class="article-category-link" href="/cht/categories/helloworld/">helloworld</a>
     </div>
 
                         
@@ -269,7 +269,7 @@
 	
 	</div>
 	
-		<a data-url="https://yo1995.github.io/cht/2016/08/15/About-this-page/" data-id="cis1t4f420000xonvr09yby40" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+		<a data-url="https://yo1995.github.io/cht/2016/08/15/About-this-page/" data-id="cis1yv6hp0006w4nv3mq4iy2t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -348,6 +348,142 @@
 
 
 
+    <article id="post-the-evolution-of-the-album-page" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+		
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/cht/2016/08/19/the-evolution-of-the-album-page/">Icarus主题-相册解决方案</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/cht/2016/08/19/the-evolution-of-the-album-page/">
+            <time datetime="2016-08-19T14:25:23.000Z" itemprop="datePublished">2016-08-19</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/cht/categories/html/">html</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/cht/tags/cs/">cs</a>, <a class="tag-link" href="/cht/tags/hexo/">hexo</a>, <a class="tag-link" href="/cht/tags/html/">html</a>, <a class="tag-link" href="/cht/tags/js/">js</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h2 id="Icarus主题-相册解决方案"><a href="#Icarus主题-相册解决方案" class="headerlink" title="Icarus主题-相册解决方案"></a>Icarus主题-相册解决方案</h2></p>
+            <p class="article-more-link">
+                <a href="/cht/2016/08/19/the-evolution-of-the-album-page/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+	
+	
+	
+	</div>
+	
+		<a data-url="https://yo1995.github.io/cht/2016/08/19/the-evolution-of-the-album-page/" data-id="cis1yv6hd0002w4nvdlxcw9rf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+	
+
+            
+    
+        <a href="https://yo1995.github.io/cht/2016/08/19/the-evolution-of-the-album-page/#comments" class="article-comment-link ds-thread-count" data-thread-key="https://yo1995.github.io/cht/2016/08/19/the-evolution-of-the-album-page/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -379,13 +515,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/cht/categories/101s/">101s</a>
+        <a class="article-category-link" href="/cht/categories/helloworld/">helloworld</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/cht/tags/test/">test</a>
+        <a class="tag-link" href="/cht/tags/html/">html</a>, <a class="tag-link" href="/cht/tags/js/">js</a>, <a class="tag-link" href="/cht/tags/test/">test</a>
     </div>
 
                     </div>
@@ -408,7 +544,7 @@
 	
 	</div>
 	
-		<a data-url="https://yo1995.github.io/cht/2016/08/15/hello-world/" data-id="cis1t4f4f0002xonvki5rai3k" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+		<a data-url="https://yo1995.github.io/cht/2016/08/15/hello-world/" data-id="cis1yv6go0000w4nvur7ohkv8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -499,6 +635,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/cht/2016/08/19/the-evolution-of-the-album-page/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/html.png)" alt="Icarus主题-相册解决方案" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/html/">html</a></p>
+                            <p class="item-title"><a href="/cht/2016/08/19/the-evolution-of-the-album-page/" class="title">Icarus主题-相册解决方案</a></p>
+                            <p class="item-date"><time datetime="2016-08-19T14:25:23.000Z" itemprop="datePublished">2016-08-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/cht/2016/08/15/About-this-page/" class="thumbnail">
     
     
@@ -509,7 +664,7 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/cht/categories/101s/">101s</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/helloworld/">helloworld</a></p>
                             <p class="item-title"><a href="/cht/2016/08/15/About-this-page/" class="title">︽ About this page</a></p>
                             <p class="item-date"><time datetime="2016-08-15T07:17:56.000Z" itemprop="datePublished">2016-08-15</time></p>
                         </div>
@@ -528,7 +683,7 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/cht/categories/101s/">101s</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/helloworld/">helloworld</a></p>
                             <p class="item-title"><a href="/cht/2016/08/15/hello-world/" class="title">Hello World &amp; hexo notes</a></p>
                             <p class="item-date"><time datetime="2016-08-14T16:53:41.002Z" itemprop="datePublished">2016-08-15</time></p>
                         </div>
@@ -543,7 +698,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cht/categories/101s/">101s</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cht/categories/helloworld/">helloworld</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/html/">html</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -552,7 +707,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/08/">August 2016</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -561,7 +716,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Description/">Description</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/test/">test</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Description/">Description</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/cs/">cs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/html/">html</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/js/">js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/test/">test</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -570,7 +725,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/cht/tags/Description/" style="font-size: 10px;">Description</a> <a href="/cht/tags/test/" style="font-size: 10px;">test</a>
+            <a href="/cht/tags/Description/" style="font-size: 10px;">Description</a> <a href="/cht/tags/cs/" style="font-size: 10px;">cs</a> <a href="/cht/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/cht/tags/html/" style="font-size: 20px;">html</a> <a href="/cht/tags/js/" style="font-size: 20px;">js</a> <a href="/cht/tags/test/" style="font-size: 10px;">test</a>
         </div>
     </div>
 
