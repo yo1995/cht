@@ -270,9 +270,12 @@
 }
 
 .img-box-ul li {
-	float: left;
-	list-style-type:none;
-	margin: 18px;
+	list-style-type: none;
+	margin: 10px;
+	overflow: auto;
+	display: inline-block;
+	*display: inline;
+	vertical-align: middle;
 }
 
 #imgtxt p{

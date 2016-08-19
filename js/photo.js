@@ -17,7 +17,7 @@ function() {
 			var reg = /\.\w+$/; 
             if (! (o >= e.length)) {
                 for (var a = "",
-                i = o; i < n && i < e.length; i++) a += '<li><div class="img-box"  id="imgtxt"><a class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"/></a></div><div id="imgtxt"><p>' + e[i].replace(reg,'') + '</p></div></li>';
+                i = o; i < n && i < e.length; i++) a += '<li><div class="img-box"  id="imgtxt"><a title=' + e[i].replace(reg,'').replace(' ','&nbsp;') + ' class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"/></a></div></li>';
                 $(".img-box-ul").append(a);
                 //$(".img-box-ul").lazyload();此处有待debug
 				changeSize();
@@ -42,7 +42,7 @@ var changeSize = function(){
 			$(".img-box").css({"width":"auto", "height":"auto"});
 		}else{
 			var height = $(".img-box-ul").height();
-			var size = Math.max(height*0.26, 157);
+			var size = Math.max(height*0.17, 115);
 			$(".img-box").width(size).height(size);
 			$("ul").css("float:left");
 		}
