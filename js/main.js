@@ -57,7 +57,17 @@
 		bp.src = "/cht/js/photo.js";
 		var s = document.getElementsByTagName("script")[0];
 		s.parentNode.insertBefore(bp, s),
-		require(['/cht/js/photo.js', '/cht/js/jquery.lazyload.js', '/cht/vendor/fancybox/jquery.fancybox.js'], function(obj) {
+		require(['/cht/js/photo.js', '/cht/vendor/fancybox/jquery.fancybox.js'], function(obj) {
+            obj.init();
+        });
+    }
+	
+	if($('.awards').length) {
+        var bp = document.createElement("script");
+		bp.src = "/cht/js/photo-a.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s),
+		require(['/cht/js/photo-a.js', '/cht/vendor/fancybox/jquery.fancybox.js'], function(obj) {
             obj.init();
         });
     }
