@@ -5,7 +5,7 @@ function() {
         offset: 6, //每次加载图片数
         init: function() {
             var t = this;
-            $.getJSON("/cht/gallery/data.json",
+            $.getJSON("/cht/gallery_data.json",
             function(e) {
                 t.render(t.page, e),
                 t.scroll(e)

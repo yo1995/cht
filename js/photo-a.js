@@ -5,7 +5,7 @@ function() {
         offset: 8, //ÿ�μ���ͼƬ��
         init: function() {
             var t = this;
-            $.getJSON("/cht/awards/data.json",
+            $.getJSON("/cht/awards_data.json",
             function(e) {
                 t.render(t.page, e),
                 t.scroll(e)
