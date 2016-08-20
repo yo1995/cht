@@ -18,11 +18,25 @@ function() {
 			var spc = /\s+/g;
             if (! (o >= e.length)) {
                 for (var a = "",
-                i = o; i < n && i < e.length; i++) a += '<li><div class="img-box"  id="imgtxt"><a title=' + e[i].replace(reg,'').replace(spc,'&nbsp;') + ' class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"/></a></div></li>';
+                i = o; i < n && i < e.length; i++) a += '<li><div class="img-box"  id="imgtxt"><a title=' + e[i].replace(reg,'').replace(spc,'&nbsp;') + ' class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yo1995/page-backup/master/photos/' + e[i] + '"><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/photos_m/' + e[i] + '"/></a></div></li>';
                 $(".img-box-ul").append(a);
                 //$(".img-box-ul").lazyload();此处有待debug
 				changeSize();
-                $("a[rel=example_group]").fancybox()
+                $("a[rel=example_group]").fancybox({
+					prevEffect	: 'elastic',
+					nextEffect	: 'elastic',
+					helpers	: {
+						title	: {
+							type: 'float'
+						},
+						thumbs	: {
+							width	: 50,
+							height	: 50,
+							source  : 'https://raw.githubusercontent.com/yo1995/page-backup/master/photos_m/' + e[i]
+							position: 'bottom'
+						}
+					}
+				});
             }
         },
         scroll: function(t) {
