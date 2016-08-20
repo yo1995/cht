@@ -32,7 +32,7 @@ function() {
 						thumbs	: {
 							width	: 50,
 							height	: 50,
-							source  : 'https://raw.githubusercontent.com/yo1995/page-backup/master/awards_m/' + e[i]
+							source  : 'https://raw.githubusercontent.com/yo1995/page-backup/master/awards_m/' + e[i],
 							position: 'bottom'
 						}
 					}
