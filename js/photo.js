@@ -2,10 +2,10 @@ define([],
 function() {
     return {
         page: 1,
-        offset: 6, //每次加载图片数
+        offset: 10, //每次加载图片数
         init: function() {
             var t = this;
-            $.getJSON("/cht/gallery_data.json",
+            $.getJSON("css/json/gallery_data.json",
             function(e) {
                 t.render(t.page, e),
                 t.scroll(e)
@@ -32,7 +32,6 @@ function() {
 						thumbs	: {
 							width	: 50,
 							height	: 50,
-							source  : 'https://raw.githubusercontent.com/yo1995/page-backup/master/photos_m/' + e[i],
 							position: 'bottom'
 						}
 					}

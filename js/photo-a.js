@@ -2,10 +2,10 @@ define([],
 function() {
     return {
         page: 1,
-        offset: 8, //ÿ�μ���ͼƬ��
+        offset: 10, //ÿ�μ���ͼƬ��
         init: function() {
             var t = this;
-            $.getJSON("/cht/awards_data.json",
+            $.getJSON("css/json/awards_data.json",
             function(e) {
                 t.render(t.page, e),
                 t.scroll(e)
@@ -32,7 +32,6 @@ function() {
 						thumbs	: {
 							width	: 50,
 							height	: 50,
-							source  : 'https://raw.githubusercontent.com/yo1995/page-backup/master/awards_m/' + e[i],
 							position: 'bottom'
 						}
 					}
