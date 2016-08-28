@@ -3,14 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: Description | Manifestations of Chen Ting</title>
+    <title>Coding.net mirror for the blog | Manifestations of Chen Ting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Manifestations of Chen Ting">
-<meta property="og:url" content="https://yo1995.github.io/tags/Description/index.html">
+    <meta name="description" content="做个备份，记录博客备份到国内coding.net平台的过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coding.net mirror for the blog">
+<meta property="og:url" content="https://yo1995.github.io/2016/08/28/2016-08-28-coding-net-backup/index.html">
 <meta property="og:site_name" content="Manifestations of Chen Ting">
+<meta property="og:description" content="做个备份，记录博客备份到国内coding.net平台的过程。">
+<meta property="og:updated_time" content="2016-08-28T13:06:57.174Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Manifestations of Chen Ting">
+<meta name="twitter:title" content="Coding.net mirror for the blog">
+<meta name="twitter:description" content="做个备份，记录博客备份到国内coding.net平台的过程。">
     
 
     
@@ -217,50 +221,217 @@
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#Description</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-2016-08-28-coding-net-backup" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+		
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/cht/2016/08/15/About-this-page/">︽ About this page</a>
+        <h1 class="article-title" itemprop="name">
+            Coding.net mirror for the blog
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/cht/2016/08/15/About-this-page/">
-            <time datetime="2016-08-15T07:17:56.000Z" itemprop="datePublished">2016-08-15</time>
+        <a href="/cht/2016/08/28/2016-08-28-coding-net-backup/">
+            <time datetime="2016-08-28T13:42:33.035Z" itemprop="datePublished">2016-08-28</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/cht/categories/helloworld/">helloworld</a>
+        <a class="article-category-link" href="/cht/categories/html/">html</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/cht/tags/Description/">Description</a>
+        <a class="tag-link" href="/cht/tags/Git/">Git</a>, <a class="tag-link" href="/cht/tags/Jekyll/">Jekyll</a>, <a class="tag-link" href="/cht/tags/html/">html</a>
     </div>
 
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设定ssh公钥"><span class="toc-number">1.</span> <span class="toc-text">设定ssh公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#coding-pages设置相关"><span class="toc-number">2.</span> <span class="toc-text">coding-pages设置相关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问速度"><span class="toc-number">3.</span> <span class="toc-text">访问速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它"><span class="toc-number">4.</span> <span class="toc-text">其它</span></a></li></ol>
                 </div>
-            </div>
+            
+            <h2 id="设定ssh公钥"><a href="#设定ssh公钥" class="headerlink" title="设定ssh公钥"></a>设定ssh公钥</h2><p>截止日期2017.1，毕业前及时更换所有注册邮箱。</p>
+<h2 id="coding-pages设置相关"><a href="#coding-pages设置相关" class="headerlink" title="coding-pages设置相关"></a>coding-pages设置相关</h2><p>默认分支为coding-pages，默认域名为{username}.coding.me，可绑定域名。</p>
+<h2 id="访问速度"><a href="#访问速度" class="headerlink" title="访问速度"></a>访问速度</h2><p>更换了以后确实访问速度提升很多，但制约速度的主要因素还是一些文件的载入。尤其是js。</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>之前尝试采用git到多个分支的方法：<br>更改.git目录下config文件，增加pushurl = git@git.coding.net:{username}/{username}.git即可推送至多个仓库同一分支。<br>然而因为coding默认分支与github不相同，因而无法使用此方法。</p>
+<p>同时，由于不同页面的config.yml亦存在一些差异，因而放弃同目录多远程仓库推送，改为双目录。<br>准备以后coding更新速率低于github，每周同步一次这样。</p>
+
+        
         </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+	
+	
+	
+	</div>
+	
+		<a data-url="https://yo1995.github.io/cht/2016/08/28/2016-08-28-coding-net-backup/" data-id="ciseo2xkm000f6cnvew16fro7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+	
+
+            
     
-</div>
+        <a href="https://yo1995.github.io/cht/2016/08/28/2016-08-28-coding-net-backup/#comments" class="article-comment-link ds-thread-count" data-thread-key="https://yo1995.github.io/cht/2016/08/28/2016-08-28-coding-net-backup/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/cht/2016/08/28/2016-07-12-no-longer-if-support-for-asm/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    ASM no longer supports impact factors
+                
+            </div>
+        </a>
+    
+    
+        <a href="/cht/2016/08/28/2016-08-25-helloworld-jekyll/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Jekyll 新坑之 Hello my new blog !</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/08/28/2016-08-28-coding-net-backup/" data-title="Coding.net mirror for the blog" data-url="https://yo1995.github.io/cht/2016/08/28/2016-08-28-coding-net-backup/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
