@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Windows 文件夹同步工具 - SyncToy + Shell 同步脚本 | Manifestations of Chen Ting</title>
+    <title>Jekyll 新坑之 Hello my new blog ! | Manifestations of Chen Ting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="用于Windows平台下的文件夹同步工具。">
+    <meta name="description" content="终于明白了什么是见异思迁……之前的博客已经很好看了，然而看到基于bootstrap的未来风时，实在忍不住又换了……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows 文件夹同步工具 - SyncToy + Shell 同步脚本">
-<meta property="og:url" content="https://yo1995.github.io/2016/09/01/2016-08-29-synctoy-windows/index.html">
+<meta property="og:title" content="Jekyll 新坑之 Hello my new blog !">
+<meta property="og:url" content="https://yo1995.github.io/2016/08/28/201608/2016-08-25-helloworld-jekyll/index.html">
 <meta property="og:site_name" content="Manifestations of Chen Ting">
-<meta property="og:description" content="用于Windows平台下的文件夹同步工具。">
-<meta property="og:image" content="https://yo1995.github.io/cht/css/thumbnail/helloworld.png">
-<meta property="og:updated_time" content="2016-09-01T08:11:56.514Z">
+<meta property="og:description" content="终于明白了什么是见异思迁……之前的博客已经很好看了，然而看到基于bootstrap的未来风时，实在忍不住又换了……">
+<meta property="og:image" content="https://yo1995.github.io/cht/css/thumbnail/html.png">
+<meta property="og:updated_time" content="2016-08-28T13:52:17.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Windows 文件夹同步工具 - SyncToy + Shell 同步脚本">
-<meta name="twitter:description" content="用于Windows平台下的文件夹同步工具。">
-<meta name="twitter:image" content="https://yo1995.github.io/cht/css/thumbnail/helloworld.png">
+<meta name="twitter:title" content="Jekyll 新坑之 Hello my new blog !">
+<meta name="twitter:description" content="终于明白了什么是见异思迁……之前的博客已经很好看了，然而看到基于bootstrap的未来风时，实在忍不住又换了……">
+<meta name="twitter:image" content="https://yo1995.github.io/cht/css/thumbnail/html.png">
     
 
     
@@ -223,7 +223,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-2016-08-29-synctoy-windows" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-201608/2016-08-25-helloworld-jekyll" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
 		
@@ -233,7 +233,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Windows 文件夹同步工具 - SyncToy + Shell 同步脚本
+            Jekyll 新坑之 Hello my new blog !
         </h1>
     
 
@@ -242,8 +242,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/cht/2016/09/01/2016-08-29-synctoy-windows/">
-            <time datetime="2016-09-01T08:09:53.738Z" itemprop="datePublished">2016-09-01</time>
+        <a href="/cht/2016/08/28/201608/2016-08-25-helloworld-jekyll/">
+            <time datetime="2016-08-28T13:42:33.033Z" itemprop="datePublished">2016-08-28</time>
         </a>
     </div>
 
@@ -251,13 +251,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/cht/categories/Tools/">Tools</a>
+        <a class="article-category-link" href="/cht/categories/html/">html</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/cht/tags/Windows/">Windows</a>, <a class="tag-link" href="/cht/tags/helloworld/">helloworld</a>, <a class="tag-link" href="/cht/tags/scripts/">scripts</a>, <a class="tag-link" href="/cht/tags/shell/">shell</a>, <a class="tag-link" href="/cht/tags/tools/">tools</a>
+        <a class="tag-link" href="/cht/tags/Jekyll/">Jekyll</a>, <a class="tag-link" href="/cht/tags/css/">css</a>, <a class="tag-link" href="/cht/tags/github/">github</a>, <a class="tag-link" href="/cht/tags/helloworld/">helloworld</a>, <a class="tag-link" href="/cht/tags/html/">html</a>
     </div>
 
                     </div>
@@ -267,16 +267,34 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>由于博客需要push到多个托管平台上，因而post内容和插图需要同步。之前尝试使用git，但不是特别好用，希望寻求一个合适的、简洁易用的图形化界面软件。同时，为了更方便地一件部署，希望写个shell脚本双击即可部署，免去敲代码的麻烦。<br><a id="more"></a></p>
-<h2 id="SyncToy"><a href="#SyncToy" class="headerlink" title="SyncToy"></a>SyncToy</h2><p><img src="/images/201608/synctoy2.jpg" alt=""></p>
-<p>SyncToy 是由微软推出的一款免费的文件夹同步工具。主要的功能就是用于本地同步两个文件夹的内容。</p>
-<ul>
-<li>Synchronize ：在这个模式下，SyncToy会使得两个文件夹完全一致，无论在哪一个文件夹中操作，对应的操作相当于都在另一个文件夹中执行了一次。（也就是我们所说的“同步”）。</li>
-<li>Echo：echo模式的效果是，使得在左边文件夹中新增加的和被改变的内容会被备份到右边的文件夹中。在左侧被重命名的文件以及被删除了的文件，将也会在右侧的文件夹中删除。（这种模式与synchronize很像，差别就在于这里只会从左边同步到右边，右边的操作对左边的文件夹无效~）</li>
-<li>Contribute ：也就是我们常说的“增量备份”，相当于在echo的基础上，把所有的删除操作都屏蔽掉了，只要在左边文件夹中存在过的文件都会在右侧文件夹中存在。</li>
-</ul>
-<p>实际用下来非常好用，同步很迅速。</p>
-<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><p>比较简单就不解释了…… :blush:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> &#123;blogroot&#125;</div><div class="line">jekyll build</div><div class="line"><span class="built_in">cd</span> &#123;destination&#125;</div><div class="line">git add .</div><div class="line"><span class="built_in">read</span> -p <span class="string">"键入今日提交次序："</span> order</div><div class="line"><span class="built_in">read</span> -p <span class="string">"提交原因："</span> reason</div><div class="line">git commit -m <span class="string">"<span class="variable">$(date +%Y%m%d)</span> <span class="variable">$order</span> coding commit for <span class="variable">$reason</span>"</span></div><div class="line">git push</div></pre></td></tr></table></figure></p>
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于github-pages"><span class="toc-number">1.</span> <span class="toc-text">关于github-pages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于上一个页面"><span class="toc-number">2.</span> <span class="toc-text">关于上一个页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#见异思迁"><span class="toc-number">3.</span> <span class="toc-text">见异思迁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#颜值最高的博客"><span class="toc-number">3.1.</span> <span class="toc-text">颜值最高的博客</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#寻找"><span class="toc-number">4.</span> <span class="toc-text">寻找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#适配"><span class="toc-number">5.</span> <span class="toc-text">适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#适配GFW"><span class="toc-number">6.</span> <span class="toc-text">适配GFW</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#站内搜索-Simple-Jekyll-Search"><span class="toc-number">7.</span> <span class="toc-text">站内搜索 - Simple Jekyll Search</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#目前的bug"><span class="toc-number">8.</span> <span class="toc-text">目前的bug</span></a></li></ol>
+                </div>
+            
+            <h2 id="关于github-pages"><a href="#关于github-pages" class="headerlink" title="关于github-pages"></a>关于github-pages</h2><a id="more"></a>
+<p>8月15日开始的github-pages之旅，之前参考了北邮人论坛上Java版的一篇帖子。<br>帖子中很多人都推荐使用hexo + gh-pages搭建一个现代化的静态博客。<br>我自然不能免俗，最喜欢用人家用的成熟的开源产品了，功能丰富，可定制性更强。</p>
+<h2 id="关于上一个页面"><a href="#关于上一个页面" class="headerlink" title="关于上一个页面"></a>关于上一个页面</h2><p><a href="https://yo1995.github.io/cht">戳这里！</a><br>上一个页面其实挺好看的，非常符合我自己的审美：三栏式、有文档和标签功能、站内静态搜索、丰富的自定义方法。<br>加之hexo用起来确实很方便，hexo clean、hexo g -d，敲几个字母就可以轻松发博客，不用考虑git相关的麻烦事……<br>所以我着实花了一点功夫在那个页面上。而且也取得了一些进展。<br>最主要的就是给那个页面增添了一个相册的功能。另外就是一些小的改动，比如主题加载中的小bug、对于标签逻辑的优化、对于flash的支持、thumbnail和banner等等小细节。总之，那个页面如果现在给人fork走，肯定比最开始的强不少。</p>
+<p>然而，促成我最终投奔jekyll的原因恰恰就是这个相册功能。作为传统博客的重度用户，我实在难以忍受一个相册功能羸弱的“轻博客”。<br>因而，我也在构建自己博客的同时寻觅一个具有风格美观、功能完整、响应式设计的新型博客。由于hexo作者先天并未给hexo的主题设置相册相关的接口，因而仅有寥寥无几的主题作者自己定制了相册。这其中就包括了Yilia主题，以及我定制的Icarus主题。</p>
+<p>Yilia主题对相册的支持是通过Instagram的外链制得的。由于我的照片不多，很难超过github单一repo大小的限制，因而考虑直接把github作为图床(⊙﹏⊙)b。考虑到国内github访问速度并不慢(目测有cdn)，这样做还是很方便的。</p>
+<p>具体操作细节在我另一篇关于相册的博客中有写。<a href="the-evolution-of-the-album-page">戳这里！</a></p>
+<p>总之，花了大概五天时间，终于打理好一个博客了。眼看着就可以投入使用了，结果……</p>
+<h2 id="见异思迁"><a href="#见异思迁" class="headerlink" title="见异思迁"></a>见异思迁</h2><p>偶尔在逛知乎时候看到：<a href="https://www.zhihu.com/question/20223939" target="_blank" rel="external">秀博客</a><br>尼玛，这种帖子下面各种秀个人博客啊……完全可以想象一群没被收录的个人博客背后，全是一个个等待认可的怪蜀黍！<br>不管了，点了几个看一看。真棒啊……再看看自己的博客，虽然比大众脸NexT、Yilia、Nova之类的稍微强点，但和人家一笔真是气死人啊！<br>罪恶的念头从心底萌生：我也要一个颜值超高的博客！<br>不不不，是 </p>
+<h3 id="颜值最高的博客"><a href="#颜值最高的博客" class="headerlink" title="颜值最高的博客"></a><strong>颜值最高的博客</strong></h3><p><del>捂脸跑</del></p>
+<h2 id="寻找"><a href="#寻找" class="headerlink" title="寻找"></a>寻找</h2><p>目标圈定，自然就开始左转转右看看。看来看去发现wordpress虽然泛滥成灾，但依然历久弥新，很多模板十分值得借鉴。<br>可惜，wordpress的模板并不能直接拿到jekyll里面用，不过区别倒也不算很大。<br>找来找去，千辛万苦，终于走到了一个网站：<a href="http://vlthemes.com/omnia/index.html" target="_blank" rel="external">Omnia</a><br>Vlthemes作为envato旗下的网站，质量自然很有保障。想当初envato的AE模板无数次救场啊……<br>之后的千难万险与艰苦卓绝就一笔带过了，总之我终于找到了一个自己满意的风格！</p>
+<h2 id="适配"><a href="#适配" class="headerlink" title="适配"></a>适配</h2><p>我敢说这个主题是github上独一无二的。无它，光是适配就要消耗掉一个业余开发者所有的热情。<br>jekyll因为出现的比较早，很多设计都不如hexo那么直接而简洁，因而有时需要把目录结构画到纸上，把网页各部分区域标出来才好定制内容。<br>因为hexo积累了一定经验，用了大概两天时间吧，把这个主题适配完成了。<br>当first commit正在上传时，那种紧张的心情是最快乐的。<br>当然，肯定是一堆bug啦……</p>
+<h2 id="适配GFW"><a href="#适配GFW" class="headerlink" title="适配GFW"></a>适配GFW</h2><p>功夫网的存在让我不得不去掉原本自带的disqus评论系统和谷歌分析模块。<br>对应的替代方案是多说和<del>百度站长并没有用</del><br>这些东西因为在hexo用过一遍，轻车熟路就给配好了。</p>
+<h2 id="站内搜索-Simple-Jekyll-Search"><a href="#站内搜索-Simple-Jekyll-Search" class="headerlink" title="站内搜索 - Simple Jekyll Search"></a>站内搜索 - Simple Jekyll Search</h2><p>原本是用的谷歌站内搜索，换起来着实费了一点脑筋。<br>首先百度用中文搜索，得到的结果自然是百度内嵌站内搜索的方案……<br>实在太难受了，坚决不用百度！<br>然后想到了Icarus作者自带的insight静态搜索，决意找个类似的方案。</p>
+<p>之后找到的第一个方案是lunr.js，光是安装就有八个步骤。而我第一个步骤就卡住了……<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem install jekyll-lunr-js-search</div></pre></td></tr></table></figure></p>
+<p>然后就是各种报错，大致意思就是编译失败。我去一个js居然还要编译，ruby我跟你什么仇什么怨……</p>
+<p>本着坚决不看ruby文档的倔强，在尝试了三个小时后我去github搜了一搜，居然有同名替代方案……<br>得来全不费工夫……吗？<br>又花了三小时发现那个替代方案依旧跑不起来。一天就这么结束了……</p>
+<p>转天，找到了现在用的第三个方案，很好用，但有小bug，主要是和liquid不兼容。<br>改了一下filter文件，第一次写了几行ruby代码，跑起来了，运转良好！<br>感天动地啊~</p>
+<p>如果想使用这个静态搜索，可以在blog页面下尝试。<br>顺便提一句静态搜索，其实对于个人页面很好用，只需要把所有文本内容进行采样并存储，通过一些搜索的手段就可以定位所有文章链接。Google真的是杀鸡焉用牛刀了。</p>
+<h2 id="目前的bug"><a href="#目前的bug" class="headerlink" title="目前的bug"></a>目前的bug</h2><p>目前仍旧有两个小bug</p>
+<ol>
+<li>相册页面照片图册对齐和张数问题：会多出一个空白页，另外就是横竖照片没统一情况下照片的对齐存在问题</li>
+<li>博客页面少于12篇博客载入异常。这个主要由于异步载入写死了。目测多写几篇就好了……</li>
+</ol>
 
         
         </div>
@@ -288,7 +306,7 @@
 	
 	</div>
 	
-		<a data-url="https://yo1995.github.io/cht/2016/09/01/2016-08-29-synctoy-windows/" data-id="cisk2irws000y6wnvl27u9qtn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+		<a data-url="https://yo1995.github.io/cht/2016/08/28/201608/2016-08-25-helloworld-jekyll/" data-id="cisk2su9j0019msnve4c128ie" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -357,7 +375,7 @@
 
             
     
-        <a href="https://yo1995.github.io/cht/2016/09/01/2016-08-29-synctoy-windows/#comments" class="article-comment-link ds-thread-count" data-thread-key="https://yo1995.github.io/cht/2016/09/01/2016-08-29-synctoy-windows/">Comments</a>
+        <a href="https://yo1995.github.io/cht/2016/08/28/201608/2016-08-25-helloworld-jekyll/#comments" class="article-comment-link ds-thread-count" data-thread-key="https://yo1995.github.io/cht/2016/08/28/201608/2016-08-25-helloworld-jekyll/">Comments</a>
     
 
         </footer>
@@ -366,19 +384,19 @@
         
 <nav id="article-nav">
     
-        <a href="/cht/2016/09/01/2015-02-27-dazhaimen/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/cht/2016/08/28/201608/2016-08-27-googleapis-substitution/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    考古系 - 大宅门
+                    Google Fonts and substitution
                 
             </div>
         </a>
     
     
-        <a href="/cht/2016/08/28/2016-08-27-python-PIL-101/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/cht/2016/08/19/the-evolution-of-the-album-page/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Using PIL(Pillow) to generate thumbnail</div>
+            <div class="article-nav-title">Icarus主题-相册解决方案</div>
         </a>
     
 </nav>
@@ -392,7 +410,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/09/01/2016-08-29-synctoy-windows/" data-title="Windows 文件夹同步工具 - SyncToy + Shell 同步脚本" data-url="https://yo1995.github.io/cht/2016/09/01/2016-08-29-synctoy-windows/"></div>
+    <div class="ds-thread" data-thread-key="2016/08/28/201608/2016-08-25-helloworld-jekyll/" data-title="Jekyll 新坑之 Hello my new blog !" data-url="https://yo1995.github.io/cht/2016/08/28/201608/2016-08-25-helloworld-jekyll/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -447,7 +465,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/cht/2016/09/01/2016-08-31-tsinghua-thoughts/" class="thumbnail">
+                            <a href="/cht/2016/09/01/201608/2016-08-31-tsinghua-thoughts/" class="thumbnail">
     
     
         <span style="background-image:url(/cht/css/thumbnail/helloworld.png)" alt="有关T大的一些链接 + 自己的一些反省" class="thumbnail-image"></span>
@@ -458,7 +476,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
-                            <p class="item-title"><a href="/cht/2016/09/01/2016-08-31-tsinghua-thoughts/" class="title">有关T大的一些链接 + 自己的一些反省</a></p>
+                            <p class="item-title"><a href="/cht/2016/09/01/201608/2016-08-31-tsinghua-thoughts/" class="title">有关T大的一些链接 + 自己的一些反省</a></p>
                             <p class="item-date"><time datetime="2016-09-01T08:13:42.034Z" itemprop="datePublished">2016-09-01</time></p>
                         </div>
                     </li>
@@ -466,7 +484,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/cht/2016/09/01/2014-11-16-Joe-Montana-Jerry-Rice/" class="thumbnail">
+                            <a href="/cht/2016/09/01/201608/2014-11-16-Joe-Montana-Jerry-Rice/" class="thumbnail">
     
     
         <span style="background-image:url(/cht/css/thumbnail/football.png)" alt="考古系 - Joe Montana &amp; Jerry Rice" class="thumbnail-image"></span>
@@ -477,7 +495,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
-                            <p class="item-title"><a href="/cht/2016/09/01/2014-11-16-Joe-Montana-Jerry-Rice/" class="title">考古系 - Joe Montana &amp; Jerry Rice</a></p>
+                            <p class="item-title"><a href="/cht/2016/09/01/201608/2014-11-16-Joe-Montana-Jerry-Rice/" class="title">考古系 - Joe Montana &amp; Jerry Rice</a></p>
                             <p class="item-date"><time datetime="2016-09-01T08:13:42.032Z" itemprop="datePublished">2016-09-01</time></p>
                         </div>
                     </li>
@@ -485,7 +503,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/cht/2016/09/01/2014-08-28-APSA/" class="thumbnail">
+                            <a href="/cht/2016/09/01/201608/2014-08-28-APSA/" class="thumbnail">
     
     
         <span style="background-image:url(/cht/css/thumbnail/game.png)" alt="考古系 - 2014.8 APSA Program" class="thumbnail-image"></span>
@@ -496,7 +514,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
-                            <p class="item-title"><a href="/cht/2016/09/01/2014-08-28-APSA/" class="title">考古系 - 2014.8 APSA Program</a></p>
+                            <p class="item-title"><a href="/cht/2016/09/01/201608/2014-08-28-APSA/" class="title">考古系 - 2014.8 APSA Program</a></p>
                             <p class="item-date"><time datetime="2016-09-01T08:13:42.031Z" itemprop="datePublished">2016-09-01</time></p>
                         </div>
                     </li>
@@ -504,7 +522,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/cht/2016/09/01/2015-02-27-dazhaimen/" class="thumbnail">
+                            <a href="/cht/2016/09/01/201608/2015-02-27-dazhaimen/" class="thumbnail">
     
     
         <span style="background-image:url(/cht/css/thumbnail/game.png)" alt="考古系 - 大宅门" class="thumbnail-image"></span>
@@ -515,7 +533,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/cht/categories/Movie/">Movie</a></p>
-                            <p class="item-title"><a href="/cht/2016/09/01/2015-02-27-dazhaimen/" class="title">考古系 - 大宅门</a></p>
+                            <p class="item-title"><a href="/cht/2016/09/01/201608/2015-02-27-dazhaimen/" class="title">考古系 - 大宅门</a></p>
                             <p class="item-date"><time datetime="2016-09-01T08:12:23.541Z" itemprop="datePublished">2016-09-01</time></p>
                         </div>
                     </li>
@@ -523,7 +541,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/cht/2016/09/01/2016-08-29-synctoy-windows/" class="thumbnail">
+                            <a href="/cht/2016/09/01/201608/2016-08-29-synctoy-windows/" class="thumbnail">
     
     
         <span style="background-image:url(/cht/css/thumbnail/helloworld.png)" alt="Windows 文件夹同步工具 - SyncToy + Shell 同步脚本" class="thumbnail-image"></span>
@@ -534,7 +552,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/cht/categories/Tools/">Tools</a></p>
-                            <p class="item-title"><a href="/cht/2016/09/01/2016-08-29-synctoy-windows/" class="title">Windows 文件夹同步工具 - SyncToy + Shell 同步脚本</a></p>
+                            <p class="item-title"><a href="/cht/2016/09/01/201608/2016-08-29-synctoy-windows/" class="title">Windows 文件夹同步工具 - SyncToy + Shell 同步脚本</a></p>
                             <p class="item-date"><time datetime="2016-09-01T08:09:53.738Z" itemprop="datePublished">2016-09-01</time></p>
                         </div>
                     </li>
