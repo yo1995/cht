@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Manifestations of Chen Ting">
 <meta property="og:description" content="日常Python使用系列">
 <meta property="og:image" content="https://yo1995.github.io/cht/css/thumbnail/python.png">
-<meta property="og:updated_time" content="2016-09-05T12:57:31.757Z">
+<meta property="og:updated_time" content="2016-09-05T15:23:18.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python日常小记 - 文字表情包制作器 for Wechat">
 <meta name="twitter:description" content="日常Python使用系列">
@@ -293,9 +293,7 @@
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>第一版程序写的简单，主要就是解决上述两个问题。<br>首先是文字变图片。PIL库的ImageDraw提供了text方案。尽管对于小字体存在一定异常，但本案例中并无大碍。<br>另外可以考虑的方案是通过一些与GUI结合的库实现，网上案例有使用pygame实现的，效果类似。</p>
 <p>其次是图片存成透明GIF。由于GIF格式出现较早，对于透明度和色阶的支持不如其后辈png来得好<a href="[Python透明度相关问题](http://www.pythonclub.org/modules/pil/convert-png-gif)">^1</a>。如今GIF仍旧能够盛行的一大因素就是其能支持简易动画，同时色彩较少的文件能有不错的文件体积。</p>
 <p>个人理解GIF的透明度是以牺牲某一种特定颜色为代价的。例如本例中，就将纯黑色#000设为了透明色，因而图片中所有纯黑色的地方均会被优化为透明。</p>
-<p>整体实现过程如下：</p>
-<p>st=&gt;start: 开始<br>e=&gt;end: 结束<br>io=&gt;inputoutput: 输入需要转化的文字<br>op1=&gt;operation: 将文字转化为矢量图形<br>op2=&gt;operation: 将矢量图形绘制到创建好的图片背景上<br>op3=&gt;operation: 将绘制完的图形保存为GIF</p>
-<p>st-&gt;op1-&gt;op2-&gt;op3-&gt;e</p>
+<p>整体实现过程如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: 开始</div><div class="line">e=&gt;end: 结束</div><div class="line">io=&gt;inputoutput: 输入需要转化的文字</div><div class="line">op1=&gt;operation: 将文字转化为矢量图形</div><div class="line">op2=&gt;operation: 将矢量图形绘制到创建好的图片背景上</div><div class="line">op3=&gt;operation: 将绘制完的图形保存为GIF</div><div class="line"></div><div class="line">st-&gt;op1-&gt;op2-&gt;op3-&gt;e</div></pre></td></tr></table></figure></p>
 <h2 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h2><p>这个程序挺简单的，但是还是花了接近半小时调试，主要原因是Python2.7的中文匹配utf8问题和GIF格式透明度定义问题。重新定义了颜色以后果然解决。关于Python的其它体会见矫情篇文章……</p>
 <h2 id="最新版代码"><a href="#最新版代码" class="headerlink" title="最新版代码"></a>最新版代码</h2><h3 id="ver-0-1-alpha"><a href="#ver-0-1-alpha" class="headerlink" title="ver 0.1 alpha"></a>ver 0.1 alpha</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> os,sys,locale</div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageFont, ImageDraw</div><div class="line">  </div><div class="line">zihao = <span class="number">100</span></div><div class="line">img = Image.open(<span class="string">'1.gif'</span>)</div><div class="line">transparency = img.info[<span class="string">'transparency'</span>]</div><div class="line">text = raw_input(<span class="string">u'请输入需要转化的文字：\n'</span>.encode(<span class="string">'gb18030'</span>)).decode(sys.stdin.encoding <span class="keyword">or</span> locale.getpreferredencoding(<span class="keyword">True</span>))</div><div class="line">im = Image.new(<span class="string">"RGBA"</span>, (zihao*len(text) , zihao + <span class="number">30</span>), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))</div><div class="line">dr = ImageDraw.Draw(im)</div><div class="line">font = ImageFont.truetype(os.path.join(<span class="string">"fonts"</span>, <span class="string">"C:/Windows/Fonts/STZHONGS.TTF"</span>), zihao) <span class="comment">#华文中宋字体</span></div><div class="line">dr.text((<span class="number">1</span>, <span class="number">1</span>), text, font=font, fill=<span class="string">"#111"</span>)</div><div class="line"></div><div class="line">im.save(text + <span class="string">".gif"</span>,transparency=transparency)</div><div class="line">raw_input(<span class="string">u'表情已生成，任意键结束！'</span>)</div></pre></td></tr></table></figure>
 <p>程序所需模板图片：<br><img src="/images/201609/1.gif" alt=""></p>
@@ -311,7 +309,7 @@
 	
 	</div>
 	
-		<a data-url="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/" data-id="cisq72ekg001gnwnv4q0ybk9c" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+		<a data-url="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/" data-id="cisq769e8001p24nvd6gdopw7" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
