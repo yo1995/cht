@@ -118,7 +118,7 @@ body,
 body {
   color: #565a5f;
   background: #f5f8f9;
-  font: 16px "open sans", "Helvetica Neue", "Microsoft Yahei", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font: 16px "Helvetica Neue", "open sans", "Microsoft Yahei", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 a {
@@ -556,7 +556,7 @@ code {
   line-height: 1.6em;
   outline: none !important;
   background: none !important;
-  font: 16px "open sans", "Helvetica Neue", "Microsoft Yahei", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font: 16px "Helvetica Neue", "open sans", "Microsoft Yahei", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
   border: 1px solid #eceff2 !important;
 }
 .search-form-input:focus,
@@ -954,7 +954,7 @@ a.article-title:hover {
 .article-entry blockquote footer {
   font-size: 16px;
   margin: 1.6em 0;
-  font-family: "open sans", "Helvetica Neue", "Microsoft Yahei", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font-family: "Helvetica Neue", "open sans", "Microsoft Yahei", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -1151,7 +1151,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font: 14px "Helvetica Neue", "open sans", "Microsoft Yahei", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
   padding: 0 10px;
   color: #565a5f;
   outline: none;
