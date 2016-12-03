@@ -57,7 +57,7 @@
 		bp.src = "/cht/js/photo.js";
 		var s = document.getElementsByTagName("script")[0];
 		s.parentNode.insertBefore(bp, s),
-		require(['/cht/js/photo.js', '/cht/vendor/fancybox/jquery.fancybox.js'], function(obj) {
+		require(['/cht/js/photo.js', '/cht/libs/fancybox/jquery.fancybox.js'], function(obj) {
             obj.init();
         });
     }
@@ -67,7 +67,7 @@
 		bp.src = "/cht/js/photo-a.js";
 		var s = document.getElementsByTagName("script")[0];
 		s.parentNode.insertBefore(bp, s),
-		require(['/cht/js/photo-a.js', '/cht/vendor/fancybox/jquery.fancybox.js'], function(obj) {
+		require(['/cht/js/photo-a.js', '/cht/libs/fancybox/jquery.fancybox.js'], function(obj) {
             obj.init();
         });
     }
