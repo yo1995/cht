@@ -11,17 +11,12 @@
 <meta property="og:url" content="https://yo1995.github.io/2016/12/16/201612/2016-12-16-optics-collection/index.html">
 <meta property="og:site_name" content="Manifestations of Chen Ting">
 <meta property="og:description" content="Records of some works related to optics conducted as an undergraduate.">
-<meta property="og:image" content="https://yo1995.github.io/images/201612/interf.png">
-<meta property="og:image" content="https://yo1995.github.io/images/201612/2.14.PNG">
-<meta property="og:image" content="https://raw.githubusercontent.com/yo1995/page-backup/master/exp_total/figures/EMW/waveguide.jpg">
-<meta property="og:image" content="https://yo1995.github.io/images/201612/pc1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/yo1995/page-backup/master/exp_total/figures/EMW/Mach-Zahnder.gif">
-<meta property="og:image" content="https://yo1995.github.io/images/201612/ring-res.png">
-<meta property="og:updated_time" content="2016-12-16T08:45:09.620Z">
+<meta property="og:image" content="https://yo1995.github.io/cht/css/thumbnail/phys.png">
+<meta property="og:updated_time" content="2016-12-17T12:17:04.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Compilation of works related to optics">
 <meta name="twitter:description" content="Records of some works related to optics conducted as an undergraduate.">
-<meta name="twitter:image" content="https://yo1995.github.io/images/201612/interf.png">
+<meta name="twitter:image" content="https://yo1995.github.io/cht/css/thumbnail/phys.png">
     
 
     
@@ -176,7 +171,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                31
+                33
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -274,7 +269,7 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-最初对光学的印象"><span class="toc-number">1.</span> <span class="toc-text">1 - 最初对光学的印象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-波导仿真-1"><span class="toc-number">2.</span> <span class="toc-text">2 - 波导仿真^1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-超材料仿真-2"><span class="toc-number">3.</span> <span class="toc-text">3 - 超材料仿真[^2]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-耦合仿真-3"><span class="toc-number">4.</span> <span class="toc-text">4 - 耦合仿真^3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-最初对光学的印象"><span class="toc-number">1.</span> <span class="toc-text">1 - 最初对光学的印象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-波导仿真-1"><span class="toc-number">2.</span> <span class="toc-text">2 - 波导仿真[1]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-超材料仿真-2"><span class="toc-number">3.</span> <span class="toc-text">3 - 超材料仿真[2]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-耦合仿真-3"><span class="toc-number">4.</span> <span class="toc-text">4 - 耦合仿真[3]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
                 </div>
             
             <p>整个本科期间做的其它的一些仿真，由于时间关系只能简单记录一下了。基本都是未成文的大作业，有些稍微有点水平，大多数是水。</p>
@@ -285,22 +280,22 @@
 <h2 id="1-最初对光学的印象"><a href="#1-最初对光学的印象" class="headerlink" title="1 - 最初对光学的印象"></a>1 - 最初对光学的印象</h2><p>上完光学课是大二上，2014年12月，那时候根本没写过MATLAB，只是熟知该软件的运行和退出而已。张大爷说“你们可以看看高等光学仿真MATLAB”这本书，对学习光学很有帮助。于是借着人生最低分的悲愤劲儿，我夯了个干涉条纹的演示程序……</p>
 <p><img src="/images/201612/interf.png" alt="干涉条纹"></p>
 <p>很丑吧？但总归是我第一个程序了。</p>
-<h2 id="2-波导仿真-1"><a href="#2-波导仿真-1" class="headerlink" title="2 - 波导仿真^1"></a>2 - 波导仿真<a href="[Waveguide](/images/201512/waveguide.pdf)">^1</a></h2><p>大二下有一门如雷贯耳的、电子相关专业都逃不掉的课程——电磁场与电磁波。很幸运，尽管我们是正经八百的物理专业，但只需要选学工科的课程就行，而不必选电动力学这个大老虎。考试自然也是轻松写意……哎呀呀，要是我们能多选点工科课程那还不全班均绩4.0……</p>
-<p>总而言之，这门课是徐坤老师讲的，虽然课上讲得内容不多，但确实给我们了一些思路。考试时候大概也就是把静电磁搞清，再略懂时变电磁场就行。根本没有高中那些恐怖的竞赛题。中规中矩学会何种情况下用哪个麦氏方程，边界条件怎么处理就能解决大部分问题。另外呢，就是完成的第一个与光学沾点边的仿真了。作为大作业，我想稍微挑战一下自己编程的水平。也是因为与圆波导相关的贝塞尔函数确实没法手算，因而我就做了这么个简单的仿真。<a href="[Waveguide](/images/201512/waveguide.pdf)">^1</a></p>
+<h2 id="2-波导仿真-1"><a href="#2-波导仿真-1" class="headerlink" title="2 - 波导仿真[1]"></a>2 - 波导仿真[1]</h2><p>大二下有一门如雷贯耳的、电子相关专业都逃不掉的课程——电磁场与电磁波。很幸运，尽管我们是正经八百的物理专业，但只需要选学工科的课程就行，而不必选电动力学这个大老虎。考试自然也是轻松写意……哎呀呀，要是我们能多选点工科课程那还不全班均绩4.0……</p>
+<p>总而言之，这门课是徐坤老师讲的，虽然课上讲得内容不多，但确实给我们了一些思路。考试时候大概也就是把静电磁搞清，再略懂时变电磁场就行。根本没有高中那些恐怖的竞赛题。中规中矩学会何种情况下用哪个麦氏方程，边界条件怎么处理就能解决大部分问题。另外呢，就是完成的第一个与光学沾点边的仿真了。作为大作业，我想稍微挑战一下自己编程的水平。也是因为与圆波导相关的贝塞尔函数确实没法手算，因而我就做了这么个简单的仿真。[1]</p>
 <p><img src="/images/201612/2.14.PNG" alt="矩形波导模场"></p>
 <p><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/exp_total/figures/EMW/waveguide.jpg" alt="GUI"></p>
 <p>现在回看起来，当初做的工作没什么想象力，但确实废了不少苦工。现在问我亥姆霍茨方程是啥我真没法一下子答上来。但当时真是门儿清啊。</p>
-<h2 id="3-超材料仿真-2"><a href="#3-超材料仿真-2" class="headerlink" title="3 - 超材料仿真[^2]"></a>3 - 超材料仿真[^2]</h2><p>经历了一段学习，这时的我基本对MATLAB的基本语法与编程比较了解了，同时因为舍友正在跟老师做SPPs的仿真，用到了COMSOL这等神器，我自己一查，哎呀呀，真是好东西！于是我果断扔掉手头的项目，花了大概两三天夜以继日地学习例程，终于在DDL之前用COMSOL做出来第一个与射频光学有关的仿真。[^2]</p>
+<h2 id="3-超材料仿真-2"><a href="#3-超材料仿真-2" class="headerlink" title="3 - 超材料仿真[2]"></a>3 - 超材料仿真[2]</h2><p>经历了一段学习，这时的我基本对MATLAB的基本语法与编程比较了解了，同时因为舍友正在跟老师做SPPs的仿真，用到了COMSOL这等神器，我自己一查，哎呀呀，真是好东西！于是我果断扔掉手头的项目，花了大概两三天夜以继日地学习例程，终于在DDL之前用COMSOL做出来第一个与射频光学有关的仿真。[2]</p>
 <p><img src="/images/201612/pc1.png" alt="古斯汉欣位移"></p>
 <p>当时为什么要仿真这个呢？实际上是因为去半导体所时，一位姓李的研究员提出了“古斯汉欣位移能不能为负”的问题。本来这个词在课程里面也是简单一听，而且不同材料的产生这种位移、人们对它的解释还没统一，我也是云里雾里。这么一问，我倒感兴趣，想看看能不能做点仿真了解一下这个东西。</p>
 <p>通过这个仿真，我一下接触到了FEM、FVM的思想，以及各种近似解决边界条件不连续的思想（耗散边界、周期边界、完美匹配层等等）。尽管这种剖分网格有限元计算的方法在力学和机械中应用比较多，但近年随着对材料科学研究的逐渐细化，这种简单易得的仿真方法逐步运用到光电子学上面了。后来我也了解了一下有限元行业，基本还是外国牢牢把控着剖分算法，求解器等等。我国还是任重而道远啊！这种高端科技掌握在人家手上总有点被人拿捏的感觉……</p>
 <p>另外，我还自己找虐尝试改一个FDTD的MATLAB例程，这个难度比波导的程序大多了……根本就是盲人摸象，看不懂FDTD的网格怎么划分的。mesh一改牵一发动全身。</p>
-<h2 id="4-耦合仿真-3"><a href="#4-耦合仿真-3" class="headerlink" title="4 - 耦合仿真^3"></a>4 - 耦合仿真<a href="[Modulator](/images/201512/ring-resonator.pdf)">^3</a></h2><p><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/exp_total/figures/EMW/Mach-Zahnder.gif" alt="Mach-Zehnder调制器"></p>
+<h2 id="4-耦合仿真-3"><a href="#4-耦合仿真-3" class="headerlink" title="4 - 耦合仿真[3]"></a>4 - 耦合仿真[3]</h2><p><img src="https://raw.githubusercontent.com/yo1995/page-backup/master/exp_total/figures/EMW/Mach-Zahnder.gif" alt="Mach-Zehnder调制器"></p>
 <p>自从大三下，课程少了以后自己就玩儿开了花。中科院那边黄老师鸽了，至今还有点遗憾，要不没准我已经有OE或者JPDAP的文章了。不过确实也对微腔相关的东西做了一点调研，觉得蛮有意思，以后不失为一条出路。</p>
 <p><img src="/images/201612/ring-res.png" alt="Ring Resonator"></p>
 <p>这学期的大作业基本就是和光纤、光器件、光调制之类的离不开干系了。主要感兴趣的就是如何产生光（电光转换相关器件）、如何传输光（光纤、新型光纤、自由空间）、如何让光电相互作用（二阶三阶效应、调制、滤波）等等。仿真一个是WGM，另外一个是最基础的环形谐振腔。<del>其实还仿真了太阳能电池但根本不知道自己在做什么删匿逃</del></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本科期间可能对光电的研究暂时告一段落了，除非我能按时完成耦合老师的蜡烛三部曲、胖老师的蓝牙小汽车、背完TCF单词拿到奖学金……否则我应该不会再碰微腔和微纳结构了。不过我还是希望在未来的某天，我能一眼就看见人群中闪耀着光芒的微腔激光器~</p>
-<p>[^2]: <a href="/images/201512/photonic-crystal.pdf">Photonic crystal</a></p>
+<p><a href="/images/201512/waveguide.pdf">Waveguide</a><br><a href="/images/201512/photonic-crystal.pdf">Photonic crystal</a><br><a href="/images/201512/ring-resonator.pdf">Modulator</a></p>
 
         
         </div>
@@ -312,7 +307,7 @@
 	
 	</div>
 	
-		<a data-url="https://yo1995.github.io/cht/2016/12/16/201612/2016-12-16-optics-collection/" data-id="ciwt6p0uw002uv8nvxad2lv5n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+		<a data-url="https://yo1995.github.io/cht/2016/12/16/201612/2016-12-16-optics-collection/" data-id="cixjq5zsh0037h4nvuodn7mpl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -390,6 +385,15 @@
         
 <nav id="article-nav">
     
+        <a href="/cht/2016/12/18/201612/2016-12-10-yuanguan/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    圆观
+                
+            </div>
+        </a>
+    
     
         <a href="/cht/2016/11/29/201611/2016-11-28-reverence/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
@@ -462,10 +466,48 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/cht/2017/01/05/201701/2017-01-04-replaceability/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/game.png)" alt="2016 Review - Replaceability" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
+                            <p class="item-title"><a href="/cht/2017/01/05/201701/2017-01-04-replaceability/" class="title">2016 Review - Replaceability</a></p>
+                            <p class="item-date"><time datetime="2017-01-04T17:03:38.694Z" itemprop="datePublished">2017-01-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2016/12/18/201612/2016-12-10-yuanguan/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/helloworld.png)" alt="圆观" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Reading/">Reading</a></p>
+                            <p class="item-title"><a href="/cht/2016/12/18/201612/2016-12-10-yuanguan/" class="title">圆观</a></p>
+                            <p class="item-date"><time datetime="2016-12-17T16:32:18.431Z" itemprop="datePublished">2016-12-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/cht/2016/12/16/201612/2016-12-16-optics-collection/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/cht/css/thumbnail/phys.png)" alt="Compilation of works related to optics" class="thumbnail-image"></span>
     
 </a>
 
@@ -516,44 +558,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/cht/2016/11/11/201611/2016-11-10-puisque-courir/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/cht/css/thumbnail/game.png)" alt="既然学会了跑，为何还要走？" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
-                            <p class="item-title"><a href="/cht/2016/11/11/201611/2016-11-10-puisque-courir/" class="title">既然学会了跑，为何还要走？</a></p>
-                            <p class="item-date"><time datetime="2016-11-11T12:27:09.730Z" itemprop="datePublished">2016-11-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/cht/2016/09/29/201609/2016-09-28-peyton-manning-omaha/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/cht/css/thumbnail/football.png)" alt="考古系 - 与三位NFL传奇的邂逅" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
-                            <p class="item-title"><a href="/cht/2016/09/29/201609/2016-09-28-peyton-manning-omaha/" class="title">考古系 - 与三位NFL传奇的邂逅</a></p>
-                            <p class="item-date"><time datetime="2016-09-29T08:10:24.833Z" itemprop="datePublished">2016-09-29</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -563,7 +567,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Coding/">Coding</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Games/">Games</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Life/">Life</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Movie/">Movie</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Physics/">Physics</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Reading/">Reading</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/School/">School</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Tools/">Tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/helloworld/">helloworld</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/html/">html</a><span class="category-list-count">4</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Coding/">Coding</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Games/">Games</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Life/">Life</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Movie/">Movie</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Physics/">Physics</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Reading/">Reading</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/School/">School</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Tools/">Tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/helloworld/">helloworld</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/html/">html</a><span class="category-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -572,7 +576,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/09/">September 2016</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/08/">August 2016</a><span class="archive-list-count">11</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2017/01/">January 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/09/">September 2016</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/08/">August 2016</a><span class="archive-list-count">11</span></li></ul>
         </div>
     </div>
 
@@ -581,7 +585,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Description/">Description</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Experiments/">Experiments</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/FPGA/">FPGA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/GFW/">GFW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Impact-Factors/">Impact Factors</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Jekyll/">Jekyll</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/MATLAB/">MATLAB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Physics/">Physics</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/School/">School</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/TV/">TV</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/TsingHua/">TsingHua</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/VLC/">VLC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/basic/">basic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/blog/">blog</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/camping/">camping</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/chaos/">chaos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/coding/">coding</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/contest/">contest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/css/">css</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/education/">education</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/football/">football</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/games/">games</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/helloworld/">helloworld</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/html/">html</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/image/">image</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/innovation/">innovation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/js/">js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/latex/">latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/lifestyle/">lifestyle</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/movie/">movie</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/optics/">optics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/philosophy/">philosophy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/project/">project</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/reading/">reading</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/review/">review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/roguelike/">roguelike</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/scripts/">scripts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/semiconductor/">semiconductor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/simulation/">simulation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/sports/">sports</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/test/">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/tools/">tools</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/volunteer/">volunteer</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Description/">Description</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Experiments/">Experiments</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/FPGA/">FPGA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/GFW/">GFW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Impact-Factors/">Impact Factors</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Jekyll/">Jekyll</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/MATLAB/">MATLAB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Physics/">Physics</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/School/">School</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/TV/">TV</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/TsingHua/">TsingHua</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/VLC/">VLC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/basic/">basic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/blog/">blog</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/camping/">camping</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/chaos/">chaos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/coding/">coding</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/contest/">contest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/css/">css</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/education/">education</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/football/">football</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/games/">games</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/helloworld/">helloworld</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/html/">html</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/image/">image</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/innovation/">innovation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/js/">js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/latex/">latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/lifestyle/">lifestyle</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/movie/">movie</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/optics/">optics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/philosophy/">philosophy</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/project/">project</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/reading/">reading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/review/">review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/roguelike/">roguelike</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/scripts/">scripts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/semiconductor/">semiconductor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/simulation/">simulation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/sports/">sports</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/test/">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/tools/">tools</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/volunteer/">volunteer</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -590,7 +594,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/cht/tags/C/" style="font-size: 10px;">C#</a> <a href="/cht/tags/Description/" style="font-size: 10px;">Description</a> <a href="/cht/tags/Experiments/" style="font-size: 12px;">Experiments</a> <a href="/cht/tags/FPGA/" style="font-size: 10px;">FPGA</a> <a href="/cht/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/cht/tags/Git/" style="font-size: 10px;">Git</a> <a href="/cht/tags/Impact-Factors/" style="font-size: 10px;">Impact Factors</a> <a href="/cht/tags/Jekyll/" style="font-size: 12px;">Jekyll</a> <a href="/cht/tags/MATLAB/" style="font-size: 10px;">MATLAB</a> <a href="/cht/tags/Physics/" style="font-size: 16px;">Physics</a> <a href="/cht/tags/School/" style="font-size: 16px;">School</a> <a href="/cht/tags/TV/" style="font-size: 12px;">TV</a> <a href="/cht/tags/TsingHua/" style="font-size: 10px;">TsingHua</a> <a href="/cht/tags/VLC/" style="font-size: 10px;">VLC</a> <a href="/cht/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/cht/tags/basic/" style="font-size: 10px;">basic</a> <a href="/cht/tags/blog/" style="font-size: 14px;">blog</a> <a href="/cht/tags/camping/" style="font-size: 10px;">camping</a> <a href="/cht/tags/chaos/" style="font-size: 10px;">chaos</a> <a href="/cht/tags/code/" style="font-size: 10px;">code</a> <a href="/cht/tags/coding/" style="font-size: 14px;">coding</a> <a href="/cht/tags/contest/" style="font-size: 10px;">contest</a> <a href="/cht/tags/css/" style="font-size: 14px;">css</a> <a href="/cht/tags/education/" style="font-size: 10px;">education</a> <a href="/cht/tags/football/" style="font-size: 12px;">football</a> <a href="/cht/tags/games/" style="font-size: 10px;">games</a> <a href="/cht/tags/github/" style="font-size: 10px;">github</a> <a href="/cht/tags/helloworld/" style="font-size: 14px;">helloworld</a> <a href="/cht/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/cht/tags/html/" style="font-size: 18px;">html</a> <a href="/cht/tags/image/" style="font-size: 10px;">image</a> <a href="/cht/tags/innovation/" style="font-size: 10px;">innovation</a> <a href="/cht/tags/js/" style="font-size: 12px;">js</a> <a href="/cht/tags/latex/" style="font-size: 10px;">latex</a> <a href="/cht/tags/lifestyle/" style="font-size: 20px;">lifestyle</a> <a href="/cht/tags/movie/" style="font-size: 12px;">movie</a> <a href="/cht/tags/optics/" style="font-size: 10px;">optics</a> <a href="/cht/tags/philosophy/" style="font-size: 10px;">philosophy</a> <a href="/cht/tags/project/" style="font-size: 10px;">project</a> <a href="/cht/tags/python/" style="font-size: 16px;">python</a> <a href="/cht/tags/reading/" style="font-size: 10px;">reading</a> <a href="/cht/tags/review/" style="font-size: 10px;">review</a> <a href="/cht/tags/roguelike/" style="font-size: 10px;">roguelike</a> <a href="/cht/tags/scripts/" style="font-size: 10px;">scripts</a> <a href="/cht/tags/semiconductor/" style="font-size: 10px;">semiconductor</a> <a href="/cht/tags/shell/" style="font-size: 10px;">shell</a> <a href="/cht/tags/simulation/" style="font-size: 10px;">simulation</a> <a href="/cht/tags/sports/" style="font-size: 12px;">sports</a> <a href="/cht/tags/test/" style="font-size: 10px;">test</a> <a href="/cht/tags/tools/" style="font-size: 18px;">tools</a> <a href="/cht/tags/volunteer/" style="font-size: 10px;">volunteer</a>
+            <a href="/cht/tags/C/" style="font-size: 10px;">C#</a> <a href="/cht/tags/Description/" style="font-size: 10px;">Description</a> <a href="/cht/tags/Experiments/" style="font-size: 12px;">Experiments</a> <a href="/cht/tags/FPGA/" style="font-size: 10px;">FPGA</a> <a href="/cht/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/cht/tags/Git/" style="font-size: 10px;">Git</a> <a href="/cht/tags/Impact-Factors/" style="font-size: 10px;">Impact Factors</a> <a href="/cht/tags/Jekyll/" style="font-size: 12px;">Jekyll</a> <a href="/cht/tags/MATLAB/" style="font-size: 10px;">MATLAB</a> <a href="/cht/tags/Physics/" style="font-size: 16px;">Physics</a> <a href="/cht/tags/School/" style="font-size: 16px;">School</a> <a href="/cht/tags/TV/" style="font-size: 12px;">TV</a> <a href="/cht/tags/TsingHua/" style="font-size: 10px;">TsingHua</a> <a href="/cht/tags/VLC/" style="font-size: 10px;">VLC</a> <a href="/cht/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/cht/tags/basic/" style="font-size: 10px;">basic</a> <a href="/cht/tags/blog/" style="font-size: 16px;">blog</a> <a href="/cht/tags/camping/" style="font-size: 10px;">camping</a> <a href="/cht/tags/chaos/" style="font-size: 10px;">chaos</a> <a href="/cht/tags/code/" style="font-size: 10px;">code</a> <a href="/cht/tags/coding/" style="font-size: 14px;">coding</a> <a href="/cht/tags/contest/" style="font-size: 10px;">contest</a> <a href="/cht/tags/css/" style="font-size: 14px;">css</a> <a href="/cht/tags/education/" style="font-size: 10px;">education</a> <a href="/cht/tags/football/" style="font-size: 12px;">football</a> <a href="/cht/tags/games/" style="font-size: 10px;">games</a> <a href="/cht/tags/github/" style="font-size: 10px;">github</a> <a href="/cht/tags/helloworld/" style="font-size: 14px;">helloworld</a> <a href="/cht/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/cht/tags/html/" style="font-size: 18px;">html</a> <a href="/cht/tags/image/" style="font-size: 10px;">image</a> <a href="/cht/tags/innovation/" style="font-size: 10px;">innovation</a> <a href="/cht/tags/js/" style="font-size: 12px;">js</a> <a href="/cht/tags/latex/" style="font-size: 10px;">latex</a> <a href="/cht/tags/lifestyle/" style="font-size: 20px;">lifestyle</a> <a href="/cht/tags/movie/" style="font-size: 12px;">movie</a> <a href="/cht/tags/optics/" style="font-size: 10px;">optics</a> <a href="/cht/tags/philosophy/" style="font-size: 12px;">philosophy</a> <a href="/cht/tags/project/" style="font-size: 10px;">project</a> <a href="/cht/tags/python/" style="font-size: 16px;">python</a> <a href="/cht/tags/reading/" style="font-size: 12px;">reading</a> <a href="/cht/tags/review/" style="font-size: 10px;">review</a> <a href="/cht/tags/roguelike/" style="font-size: 10px;">roguelike</a> <a href="/cht/tags/scripts/" style="font-size: 10px;">scripts</a> <a href="/cht/tags/semiconductor/" style="font-size: 10px;">semiconductor</a> <a href="/cht/tags/shell/" style="font-size: 10px;">shell</a> <a href="/cht/tags/simulation/" style="font-size: 10px;">simulation</a> <a href="/cht/tags/sports/" style="font-size: 12px;">sports</a> <a href="/cht/tags/test/" style="font-size: 10px;">test</a> <a href="/cht/tags/tools/" style="font-size: 18px;">tools</a> <a href="/cht/tags/volunteer/" style="font-size: 10px;">volunteer</a>
         </div>
     </div>
 
@@ -626,7 +630,7 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2016 Chen Ting<br>
+            &copy; 2017 Chen Ting<br>
             Proudly Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme <a href="https://github.com/ppoffice/hexo-theme-icarus">Icarus.</a> Modified by <a href="http://github.com/yo1995">yo1995</a>
         </div>
     </div>
