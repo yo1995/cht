@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Python日常小记 - 文字表情包制作器 for Wechat | Manifestations of Chen Ting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="日常Python使用系列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python日常小记 - 文字表情包制作器 for Wechat">
+<meta property="og:url" content="https://yo1995.github.io/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/index.html">
+<meta property="og:site_name" content="Manifestations of Chen Ting">
+<meta property="og:description" content="日常Python使用系列">
+<meta property="og:image" content="https://yo1995.github.io/cht/css/thumbnail/Python.png">
+<meta property="og:updated_time" content="2016-09-05T15:25:44.973Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python日常小记 - 文字表情包制作器 for Wechat">
+<meta name="twitter:description" content="日常Python使用系列">
+<meta name="twitter:image" content="https://yo1995.github.io/cht/css/thumbnail/Python.png">
+    
+
+    
+        <link rel="alternate" href="https://yo1995.github.io/feed.xml" title="Manifestations of Chen Ting" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/cht/css/images/favicons/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/cht/css/images/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/cht/css/images/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/cht/css/images/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/cht/css/images/favicons/manifest.json">
+		<link rel="mask-icon" href="/cht/css/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+    
+
+    <link rel="stylesheet" href="/cht/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cht/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/cht/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/cht/css/style.css">
+
+    <script src="/cht/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/cht/libs/fancybox/jquery.fancybox.css">
+    
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/cht/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Manifestations of Chen Ting</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/cht/.">Home</a>
+                
+                    <a class="main-nav-link" href="/cht/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/cht/gallery">Gallery</a>
+                
+                    <a class="main-nav-link" href="/cht/awards">Awards</a>
+                
+                    <a class="main-nav-link" href="/cht/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/cht/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/cht/about">About</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/cht/css/images/avatar-1.jpg" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/cht/',
+        CONTENT_URL: '/cht/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/cht/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/cht/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/gallery">Gallery</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/awards">Awards</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/about">About</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/cht/css/images/avatar-1.jpg" />
+            <h2 id="name">Chen Ting</h2>
+            <h3 id="title">Student of Beijing University of Posts and Telecommunications</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Beijing, China</span>
+            <a id="follow" target="_blank" href="https://yo1995.github.io/">FOLLOW</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                34
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                53
+                <span>tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="https://github.com/yo1995/" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.linkedin.com/in/ting-chen-402bab122/" target="_blank" title="linkedin" class=tooltip>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://my.hupu.com/17573413/" target="_blank" title="futbol-o" class=tooltip>
+                            <i class="fa fa-futbol-o"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.douban.com/people/yo1995/" target="_blank" title="book" class=tooltip>
+                            <i class="fa fa-book"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://yo1995.github.io/feed.xml" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-201609/2016-09-05-python-gif-emoticon-generator" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+		
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Python日常小记 - 文字表情包制作器 for Wechat
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/cht/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/">
+            <time datetime="2016-09-05T15:12:08.600Z" itemprop="datePublished">2016-09-05</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/cht/categories/Coding/">Coding</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/cht/tags/coding/">coding</a>, <a class="tag-link" href="/cht/tags/python/">python</a>, <a class="tag-link" href="/cht/tags/tools/">tools</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#需求分析"><span class="toc-number">1.</span> <span class="toc-text">需求分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GIF相关知识"><span class="toc-number">2.</span> <span class="toc-text">GIF相关知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Log"><span class="toc-number">3.</span> <span class="toc-text">Log</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#20160904-ver-0-1-alpha"><span class="toc-number">3.1.</span> <span class="toc-text">20160904 ver 0.1 alpha</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编程过程及难点"><span class="toc-number">3.2.</span> <span class="toc-text">编程过程及难点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方案"><span class="toc-number">3.3.</span> <span class="toc-text">解决方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#心得体会"><span class="toc-number">4.</span> <span class="toc-text">心得体会</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最新版代码"><span class="toc-number">5.</span> <span class="toc-text">最新版代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ver-0-1-alpha"><span class="toc-number">5.1.</span> <span class="toc-text">ver 0.1 alpha</span></a></li></ol></li></ol>
+                </div>
+            
+            <p>没有系统性学习过Python相关的知识，但已经用它解决了不少问题了。不得不说，如果说编程语言家庭是个Armory Pod的话，Python绝对是仓库里最趁手的一套工具包，大概就是GTA武器包水平。<br><a id="more"></a><br>MATLAB是高价买来(租来)的24K镀金太空光学炮，只限单人使用，别人一起用会攻击自己。C语言是Lo Wang的武士刀，只有远古之神会用。Ruby是镶红钻的百变小樱魔棒。VB是究极无敌改进版玩具水枪，或者满级片手剑。Verilog……更像是放了低爆弹的金属风暴。暂时只用过这几种语言……随便tx一下。</p>
+<p>进入正题，今天探讨的是一个特定的应用：如何用Python写一个微信文字表情包生成脚本。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><ul>
+<li>输入中文或英文，输出微信可识别的GIF表情图</li>
+<li>可通过修改参数控制字体字号和文字颜色</li>
+<li>输出图片需与文字宽度成正比，留白不能过多影响微信中显示效果</li>
+<li>文字过长时提示截短或分为多行输出，限制最大字符数并限制行数为3行</li>
+<li>*可直接将生成图片输出到系统剪贴板</li>
+</ul>
+<h2 id="GIF相关知识"><a href="#GIF相关知识" class="headerlink" title="GIF相关知识"></a>GIF相关知识</h2><p>GIF格式经历了1985年((⊙﹏⊙)b好久远)格式GIF87a到GIF89a的变革。现在网络上流行的GIF图片绝大多数是以后者进行编码的。</p>
+<p>后者相较于前者优势主要有三点：透明背景、隔行扫描和动画序列。本文中主要涉及第一点。</p>
+<h2 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h2><h3 id="20160904-ver-0-1-alpha"><a href="#20160904-ver-0-1-alpha" class="headerlink" title="20160904 ver 0.1 alpha"></a>20160904 ver 0.1 alpha</h3><p>解决了最基础的需求，即输入文字输出GIF文件</p>
+<h3 id="编程过程及难点"><a href="#编程过程及难点" class="headerlink" title="编程过程及难点"></a>编程过程及难点</h3><p>微信识别表情图片时，在移动端不限制文件格式，会通过色度和容差的方法去掉纯色背景，生成表情。在PC端则只支持GIF文件，会保留图片所有细节，如背景颜色等。因而，生成PC端GIF图片时，存在三个主要难点：</p>
+<ol>
+<li>如何将文字无失真转化为图片</li>
+<li>如何使输出GIF图片背景为透明</li>
+<li>如何处理中文字符串(<del>误</del>)</li>
+</ol>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>第一版程序写的简单，主要就是解决上述两个问题。<br>首先是文字变图片。PIL库的ImageDraw提供了text方案。尽管对于小字体存在一定异常，但本案例中并无大碍。<br>另外可以考虑的方案是通过一些与GUI结合的库实现，网上案例有使用pygame实现的，效果类似。</p>
+<p>其次是图片存成透明GIF。由于GIF格式出现较早，对于透明度和色阶的支持不如其后辈png来得好<a href="[Python透明度相关问题](http://www.pythonclub.org/modules/pil/convert-png-gif)">^1</a>。如今GIF仍旧能够盛行的一大因素就是其能支持简易动画，同时色彩较少的文件能有不错的文件体积。</p>
+<p>个人理解GIF的透明度是以牺牲某一种特定颜色为代价的。例如本例中，就将纯黑色#000设为了透明色，因而图片中所有纯黑色的地方均会被优化为透明。</p>
+<p>整体实现过程如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: 开始</div><div class="line">e=&gt;end: 结束</div><div class="line">io=&gt;inputoutput: 输入需要转化的文字</div><div class="line">op1=&gt;operation: 将文字转化为矢量图形</div><div class="line">op2=&gt;operation: 将矢量图形绘制到创建好的图片背景上</div><div class="line">op3=&gt;operation: 将绘制完的图形保存为GIF</div><div class="line"></div><div class="line">st-&gt;op1-&gt;op2-&gt;op3-&gt;e</div></pre></td></tr></table></figure></p>
+<h2 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h2><p>这个程序挺简单的，但是还是花了接近半小时调试，主要原因是Python2.7的中文匹配utf8问题和GIF格式透明度定义问题。重新定义了颜色以后果然解决。关于Python的其它体会见矫情篇文章……</p>
+<h2 id="最新版代码"><a href="#最新版代码" class="headerlink" title="最新版代码"></a>最新版代码</h2><h3 id="ver-0-1-alpha"><a href="#ver-0-1-alpha" class="headerlink" title="ver 0.1 alpha"></a>ver 0.1 alpha</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> os,sys,locale</div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageFont, ImageDraw</div><div class="line">  </div><div class="line">zihao = <span class="number">100</span></div><div class="line">img = Image.open(<span class="string">'1.gif'</span>)</div><div class="line">transparency = img.info[<span class="string">'transparency'</span>]</div><div class="line">text = raw_input(<span class="string">u'请输入需要转化的文字：\n'</span>.encode(<span class="string">'gb18030'</span>)).decode(sys.stdin.encoding <span class="keyword">or</span> locale.getpreferredencoding(<span class="keyword">True</span>))</div><div class="line">im = Image.new(<span class="string">"RGBA"</span>, (zihao*len(text) , zihao + <span class="number">30</span>), (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))</div><div class="line">dr = ImageDraw.Draw(im)</div><div class="line">font = ImageFont.truetype(os.path.join(<span class="string">"fonts"</span>, <span class="string">"C:/Windows/Fonts/STZHONGS.TTF"</span>), zihao) <span class="comment">#华文中宋字体</span></div><div class="line">dr.text((<span class="number">1</span>, <span class="number">1</span>), text, font=font, fill=<span class="string">"#111"</span>)</div><div class="line"></div><div class="line">im.save(text + <span class="string">".gif"</span>,transparency=transparency)</div><div class="line">raw_input(<span class="string">u'表情已生成，任意键结束！'</span>)</div></pre></td></tr></table></figure>
+<p>程序所需模板图片：<br><img src="/images/201609/1.gif" alt=""></p>
+<p>效果：<br><img src="/images/201609/allemoticons.gif" alt=""></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+	
+	
+	
+	</div>
+	
+		<a data-url="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/" data-id="ciy5s34az0023wknvrlom5l1t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+	
+
+            
+    
+        <a href="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/#comments" class="article-comment-link ds-thread-count" data-thread-key="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/cht/2016/09/05/201609/2016-09-05-python-understandings-101s/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Python日常小记 - 关于Python的碎碎念
+                
+            </div>
+        </a>
+    
+    
+        <a href="/cht/2016/09/05/201609/2016-09-05-NFL-album-download/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Python日常小记 - NFL官网相册下载</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/" data-title="Python日常小记 - 文字表情包制作器 for Wechat" data-url="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2017/01/06/201701/2017-01-06-dream-of-a-girl/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/python.png)" alt="记一次奇怪的梦境" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
+                            <p class="item-title"><a href="/cht/2017/01/06/201701/2017-01-06-dream-of-a-girl/" class="title">记一次奇怪的梦境</a></p>
+                            <p class="item-date"><time datetime="2017-01-06T01:46:04.662Z" itemprop="datePublished">2017-01-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2017/01/05/201701/2017-01-04-replaceability/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/game.png)" alt="2016 Review - Replaceability" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
+                            <p class="item-title"><a href="/cht/2017/01/05/201701/2017-01-04-replaceability/" class="title">2016 Review - Replaceability</a></p>
+                            <p class="item-date"><time datetime="2017-01-04T17:03:38.694Z" itemprop="datePublished">2017-01-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2016/12/18/201612/2016-12-10-yuanguan/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/helloworld.png)" alt="圆观" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Reading/">Reading</a></p>
+                            <p class="item-title"><a href="/cht/2016/12/18/201612/2016-12-10-yuanguan/" class="title">圆观</a></p>
+                            <p class="item-date"><time datetime="2016-12-17T16:32:18.431Z" itemprop="datePublished">2016-12-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2016/12/16/201612/2016-12-16-optics-collection/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/phys.png)" alt="Compilation of works related to optics" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Physics/">Physics</a></p>
+                            <p class="item-title"><a href="/cht/2016/12/16/201612/2016-12-16-optics-collection/" class="title">Compilation of works related to optics</a></p>
+                            <p class="item-date"><time datetime="2016-12-16T08:45:31.818Z" itemprop="datePublished">2016-12-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2016/11/29/201611/2016-11-28-reverence/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/game.png)" alt="谦德之效" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
+                            <p class="item-title"><a href="/cht/2016/11/29/201611/2016-11-28-reverence/" class="title">谦德之效</a></p>
+                            <p class="item-date"><time datetime="2016-11-29T15:45:55.609Z" itemprop="datePublished">2016-11-29</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Coding/">Coding</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Games/">Games</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Life/">Life</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Movie/">Movie</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Physics/">Physics</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Reading/">Reading</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/School/">School</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Tools/">Tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/helloworld/">helloworld</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/html/">html</a><span class="category-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/09/">September 2016</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/08/">August 2016</a><span class="archive-list-count">11</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Description/">Description</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Experiments/">Experiments</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/FPGA/">FPGA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/GFW/">GFW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Impact-Factors/">Impact Factors</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Jekyll/">Jekyll</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/MATLAB/">MATLAB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Physics/">Physics</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/School/">School</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/TV/">TV</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/TsingHua/">TsingHua</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/VLC/">VLC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/basic/">basic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/blog/">blog</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/camping/">camping</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/chaos/">chaos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/coding/">coding</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/contest/">contest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/css/">css</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/dream/">dream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/education/">education</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/football/">football</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/games/">games</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/girl/">girl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/helloworld/">helloworld</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/html/">html</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/image/">image</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/innovation/">innovation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/js/">js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/latex/">latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/lifestyle/">lifestyle</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/movie/">movie</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/optics/">optics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/philosophy/">philosophy</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/project/">project</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/reading/">reading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/review/">review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/roguelike/">roguelike</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/scripts/">scripts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/semiconductor/">semiconductor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/simulation/">simulation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/sports/">sports</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/test/">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/tools/">tools</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/volunteer/">volunteer</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/cht/tags/C/" style="font-size: 10px;">C#</a> <a href="/cht/tags/Description/" style="font-size: 10px;">Description</a> <a href="/cht/tags/Experiments/" style="font-size: 12px;">Experiments</a> <a href="/cht/tags/FPGA/" style="font-size: 10px;">FPGA</a> <a href="/cht/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/cht/tags/Git/" style="font-size: 10px;">Git</a> <a href="/cht/tags/Impact-Factors/" style="font-size: 10px;">Impact Factors</a> <a href="/cht/tags/Jekyll/" style="font-size: 12px;">Jekyll</a> <a href="/cht/tags/MATLAB/" style="font-size: 10px;">MATLAB</a> <a href="/cht/tags/Physics/" style="font-size: 16px;">Physics</a> <a href="/cht/tags/School/" style="font-size: 16px;">School</a> <a href="/cht/tags/TV/" style="font-size: 12px;">TV</a> <a href="/cht/tags/TsingHua/" style="font-size: 10px;">TsingHua</a> <a href="/cht/tags/VLC/" style="font-size: 10px;">VLC</a> <a href="/cht/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/cht/tags/basic/" style="font-size: 10px;">basic</a> <a href="/cht/tags/blog/" style="font-size: 16px;">blog</a> <a href="/cht/tags/camping/" style="font-size: 10px;">camping</a> <a href="/cht/tags/chaos/" style="font-size: 10px;">chaos</a> <a href="/cht/tags/code/" style="font-size: 10px;">code</a> <a href="/cht/tags/coding/" style="font-size: 16px;">coding</a> <a href="/cht/tags/contest/" style="font-size: 10px;">contest</a> <a href="/cht/tags/css/" style="font-size: 14px;">css</a> <a href="/cht/tags/dream/" style="font-size: 10px;">dream</a> <a href="/cht/tags/education/" style="font-size: 10px;">education</a> <a href="/cht/tags/football/" style="font-size: 12px;">football</a> <a href="/cht/tags/games/" style="font-size: 10px;">games</a> <a href="/cht/tags/girl/" style="font-size: 10px;">girl</a> <a href="/cht/tags/github/" style="font-size: 10px;">github</a> <a href="/cht/tags/helloworld/" style="font-size: 14px;">helloworld</a> <a href="/cht/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/cht/tags/html/" style="font-size: 18px;">html</a> <a href="/cht/tags/image/" style="font-size: 10px;">image</a> <a href="/cht/tags/innovation/" style="font-size: 10px;">innovation</a> <a href="/cht/tags/js/" style="font-size: 12px;">js</a> <a href="/cht/tags/latex/" style="font-size: 10px;">latex</a> <a href="/cht/tags/lifestyle/" style="font-size: 20px;">lifestyle</a> <a href="/cht/tags/movie/" style="font-size: 12px;">movie</a> <a href="/cht/tags/optics/" style="font-size: 10px;">optics</a> <a href="/cht/tags/philosophy/" style="font-size: 12px;">philosophy</a> <a href="/cht/tags/project/" style="font-size: 10px;">project</a> <a href="/cht/tags/python/" style="font-size: 16px;">python</a> <a href="/cht/tags/reading/" style="font-size: 12px;">reading</a> <a href="/cht/tags/review/" style="font-size: 10px;">review</a> <a href="/cht/tags/roguelike/" style="font-size: 10px;">roguelike</a> <a href="/cht/tags/scripts/" style="font-size: 10px;">scripts</a> <a href="/cht/tags/semiconductor/" style="font-size: 10px;">semiconductor</a> <a href="/cht/tags/shell/" style="font-size: 10px;">shell</a> <a href="/cht/tags/simulation/" style="font-size: 10px;">simulation</a> <a href="/cht/tags/sports/" style="font-size: 12px;">sports</a> <a href="/cht/tags/test/" style="font-size: 10px;">test</a> <a href="/cht/tags/tools/" style="font-size: 18px;">tools</a> <a href="/cht/tags/volunteer/" style="font-size: 10px;">volunteer</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://bbs.cloud.icybee.cn/s/article?t1=&au=yo1995&b=Cycling">Cycling</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.fuxuemingzhu.com/">负雪明烛</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://pengzhihui.xyz/">稚晖的个人站</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://icybee.cn/">IcyBee· Hacking the world!</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Chen Ting<br>
+            Proudly Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme <a href="https://github.com/ppoffice/hexo-theme-icarus">Icarus.</a> Modified by <a href="http://github.com/yo1995">yo1995</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'icarus-yo'};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+
+
+
+    
+        <script src="/cht/libs/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/cht/js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Python日常小记 - NFL官网相册下载 | Manifestations of Chen Ting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Python的第一个大部分自主完成的程序，现在看来当初挺菜，不过蛮干的劲头到时一点不输如今……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python日常小记 - NFL官网相册下载">
+<meta property="og:url" content="https://yo1995.github.io/2016/09/05/201609/2016-09-05-NFL-album-download/index.html">
+<meta property="og:site_name" content="Manifestations of Chen Ting">
+<meta property="og:description" content="Python的第一个大部分自主完成的程序，现在看来当初挺菜，不过蛮干的劲头到时一点不输如今……">
+<meta property="og:image" content="https://yo1995.github.io/cht/css/thumbnail/Python.png">
+<meta property="og:updated_time" content="2016-09-06T15:03:32.514Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python日常小记 - NFL官网相册下载">
+<meta name="twitter:description" content="Python的第一个大部分自主完成的程序，现在看来当初挺菜，不过蛮干的劲头到时一点不输如今……">
+<meta name="twitter:image" content="https://yo1995.github.io/cht/css/thumbnail/Python.png">
+    
+
+    
+        <link rel="alternate" href="https://yo1995.github.io/feed.xml" title="Manifestations of Chen Ting" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/cht/css/images/favicons/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/cht/css/images/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/cht/css/images/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/cht/css/images/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/cht/css/images/favicons/manifest.json">
+		<link rel="mask-icon" href="/cht/css/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+    
+
+    <link rel="stylesheet" href="/cht/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cht/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/cht/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/cht/css/style.css">
+
+    <script src="/cht/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/cht/libs/fancybox/jquery.fancybox.css">
+    
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/cht/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Manifestations of Chen Ting</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/cht/.">Home</a>
+                
+                    <a class="main-nav-link" href="/cht/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/cht/gallery">Gallery</a>
+                
+                    <a class="main-nav-link" href="/cht/awards">Awards</a>
+                
+                    <a class="main-nav-link" href="/cht/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/cht/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/cht/about">About</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/cht/css/images/avatar-1.jpg" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/cht/',
+        CONTENT_URL: '/cht/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/cht/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/cht/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/gallery">Gallery</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/awards">Awards</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/cht/about">About</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/cht/css/images/avatar-1.jpg" />
+            <h2 id="name">Chen Ting</h2>
+            <h3 id="title">Student of Beijing University of Posts and Telecommunications</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Beijing, China</span>
+            <a id="follow" target="_blank" href="https://yo1995.github.io/">FOLLOW</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                34
+                <span>posts</span>
+            </div>
+            <div class="article-info-block">
+                53
+                <span>tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="https://github.com/yo1995/" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.linkedin.com/in/ting-chen-402bab122/" target="_blank" title="linkedin" class=tooltip>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://my.hupu.com/17573413/" target="_blank" title="futbol-o" class=tooltip>
+                            <i class="fa fa-futbol-o"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.douban.com/people/yo1995/" target="_blank" title="book" class=tooltip>
+                            <i class="fa fa-book"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://yo1995.github.io/feed.xml" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-201609/2016-09-05-NFL-album-download" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+		
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Python日常小记 - NFL官网相册下载
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/cht/2016/09/05/201609/2016-09-05-NFL-album-download/">
+            <time datetime="2016-09-05T15:12:08.599Z" itemprop="datePublished">2016-09-05</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/cht/categories/Coding/">Coding</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/cht/tags/coding/">coding</a>, <a class="tag-link" href="/cht/tags/python/">python</a>, <a class="tag-link" href="/cht/tags/tools/">tools</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述："><span class="toc-number">1.</span> <span class="toc-text">概述：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备："><span class="toc-number">2.</span> <span class="toc-text">准备：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题1：动态页面？"><span class="toc-number">2.1.</span> <span class="toc-text">问题1：动态页面？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题2：ghost"><span class="toc-number">2.2.</span> <span class="toc-text">问题2：ghost</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题3：chromedriver"><span class="toc-number">2.3.</span> <span class="toc-text">问题3：chromedriver</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题4：文件名等杂项"><span class="toc-number">2.4.</span> <span class="toc-text">问题4：文件名等杂项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
+                </div>
+            
+            <p>原题：论python盲如何错误地学习python<br><a id="more"></a><br><a href="https://bbs.byr.cn/#!article/Rugby/2465" target="_blank" rel="external">论坛链接</a></p>
+<h2 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h2><p>不想干活花了一天时间做了一件无聊的事情。零基础自学“拍松”写了几行程序用来抓nfl官网图片。</p>
+<h2 id="准备："><a href="#准备：" class="headerlink" title="准备："></a>准备：</h2><p>首先上Python版问了一下大大应该如何实现。大大简明易懂地给出了实现方法，开干。</p>
+<p><a href="https://bbs.byr.cn/#!article/Python/12276" target="_blank" rel="external">https://bbs.byr.cn/#!article/Python/12276</a></p>
+<p>准备一些必要的东西。安装win Python 2.7，pip，bs4。这些步骤简单略去不表。</p>
+<p>由于听说过几耳朵Python用法，知道是不用写分号和通过缩进判断块结构。很顺利通过bs4取得了静态页面的所有图片。</p>
+<h3 id="问题1：动态页面？"><a href="#问题1：动态页面？" class="headerlink" title="问题1：动态页面？"></a>问题1：动态页面？</h3><p>高兴之余发现，好多图片没down下来啊？一拍脑袋就知道，肯定是动态页面，用了js了。</p>
+<p>恰巧动态页面载入的方法也听说过一些。摸索着找到了phantomjs、ghost.py、selenium三家。</p>
+<p>首先派出了phantomjs，因为对js写法一无所知，java也一窍不通，战略性放弃。</p>
+<p>转战ghost.py掉进了大坑emc42</p>
+<h3 id="问题2：ghost"><a href="#问题2：ghost" class="headerlink" title="问题2：ghost"></a>问题2：ghost</h3><p>按理说这个工具是个小而美的webkit虚拟客户端。但是一下撞上了一堆问题。</p>
+<ul>
+<li>首先是版本。其0.1和0.2版本用法完全不同，2014年资料全都没用。发现这个问题花去了一个半小时。</li>
+<li>其次是环境。需要Pyside和PyQt搭配使用。想简单安装需要VPN。此处花掉半小时。</li>
+<li>然后是用法。据说为了避免某个错误不能在term中使用。windows本来就不熟还不给用……算了弃之。此处花去一小时。<br>于是愉快地转战selenium~emc10</li>
+</ul>
+<h3 id="问题3：chromedriver"><a href="#问题3：chromedriver" class="headerlink" title="问题3：chromedriver"></a>问题3：chromedriver</h3><p>高高兴兴地下了chromedriver，随即各种奇葩问题。一一狗之没找到原因。version了一下chrome发现64系统装的32chrome，醉了……</p>
+<p>遂改换环境，一路顺利。最后测试时却遇到超时问题。</p>
+<p>再狗之，无解。本以为因墙无解，后增加延时得解。</p>
+<h3 id="问题4：文件名等杂项"><a href="#问题4：文件名等杂项" class="headerlink" title="问题4：文件名等杂项"></a>问题4：文件名等杂项</h3><p>大部分问题都迎刃而解，自然信心爆棚。最后有一点小问题。</p>
+<ul>
+<li>首先是bs的find和find_all，find_all返回的是类似一坨列表的一个结构，想要继续从中筛选需要for一下find，一条一条匹配。</li>
+<li>第二是弹出条件。发现当图片找到某一张时某个attribute会改变。遂简单粗暴if一下退出。</li>
+<li>第三是文件名称。正则匹配+人工数位数凑合上了。</li>
+<li>第四发现下太快服务器会中断链接。固定3s间隔解决。不怕慢。</li>
+<li>第五py2exe，还是win32和amd64弄混了。编译后发现bs4库丢失，暂时无解。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>人生苦短我也不想用python。最好以后不码代码emc4世上聪明人那么多，为啥要去和他们肛代码？<br>相较之下matlab简直是儿童乐园。当然python和C比也是天堂地狱。</p>
+<p>Python与exe之辩，大家都说Python就不应该编译成exe的。的确如此，但在win下玩Python本来就有点小奇葩。</p>
+<p>前端后端的连接，反正我是不敢看，太晕。想找一个元素，要是人家藏得好，半天都不见得找得出来。</p>
+<p>特别佩服@Dlovingalice 这种码神。求带飞！</p>
+<p>总之，这就当做我的Python 101吧~</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">u'Hello World !'</span></div></pre></td></tr></table></figure>
+<p>源码需要可群内索取</p>
+<p>求指点！！</p>
+<p>效果图：</p>
+<p><img src="/images/201609/captchanfl.PNG" alt="NFL效果图"><br>{.:hascaption}</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+	
+	
+	
+	</div>
+	
+		<a data-url="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-NFL-album-download/" data-id="ciy5s34ar001vwknvi5quuwfm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+	
+
+            
+    
+        <a href="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-NFL-album-download/#comments" class="article-comment-link ds-thread-count" data-thread-key="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-NFL-album-download/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/cht/2016/09/05/201609/2016-09-05-python-gif-emoticon-generator/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Python日常小记 - 文字表情包制作器 for Wechat
+                
+            </div>
+        </a>
+    
+    
+        <a href="/cht/2016/09/02/201609/2016-09-01-talk-about-blogging-again/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">再谈独立博客</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/09/05/201609/2016-09-05-NFL-album-download/" data-title="Python日常小记 - NFL官网相册下载" data-url="https://yo1995.github.io/cht/2016/09/05/201609/2016-09-05-NFL-album-download/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2017/01/06/201701/2017-01-06-dream-of-a-girl/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/python.png)" alt="记一次奇怪的梦境" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
+                            <p class="item-title"><a href="/cht/2017/01/06/201701/2017-01-06-dream-of-a-girl/" class="title">记一次奇怪的梦境</a></p>
+                            <p class="item-date"><time datetime="2017-01-06T01:46:04.662Z" itemprop="datePublished">2017-01-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2017/01/05/201701/2017-01-04-replaceability/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/game.png)" alt="2016 Review - Replaceability" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
+                            <p class="item-title"><a href="/cht/2017/01/05/201701/2017-01-04-replaceability/" class="title">2016 Review - Replaceability</a></p>
+                            <p class="item-date"><time datetime="2017-01-04T17:03:38.694Z" itemprop="datePublished">2017-01-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2016/12/18/201612/2016-12-10-yuanguan/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/helloworld.png)" alt="圆观" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Reading/">Reading</a></p>
+                            <p class="item-title"><a href="/cht/2016/12/18/201612/2016-12-10-yuanguan/" class="title">圆观</a></p>
+                            <p class="item-date"><time datetime="2016-12-17T16:32:18.431Z" itemprop="datePublished">2016-12-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2016/12/16/201612/2016-12-16-optics-collection/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/phys.png)" alt="Compilation of works related to optics" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Physics/">Physics</a></p>
+                            <p class="item-title"><a href="/cht/2016/12/16/201612/2016-12-16-optics-collection/" class="title">Compilation of works related to optics</a></p>
+                            <p class="item-date"><time datetime="2016-12-16T08:45:31.818Z" itemprop="datePublished">2016-12-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/cht/2016/11/29/201611/2016-11-28-reverence/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/cht/css/thumbnail/game.png)" alt="谦德之效" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/cht/categories/Life/">Life</a></p>
+                            <p class="item-title"><a href="/cht/2016/11/29/201611/2016-11-28-reverence/" class="title">谦德之效</a></p>
+                            <p class="item-date"><time datetime="2016-11-29T15:45:55.609Z" itemprop="datePublished">2016-11-29</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Coding/">Coding</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Games/">Games</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Life/">Life</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Movie/">Movie</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Physics/">Physics</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Reading/">Reading</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/School/">School</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/Tools/">Tools</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/helloworld/">helloworld</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cht/categories/html/">html</a><span class="category-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/11/">November 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/09/">September 2016</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cht/archives/2016/08/">August 2016</a><span class="archive-list-count">11</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Description/">Description</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Experiments/">Experiments</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/FPGA/">FPGA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/GFW/">GFW</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Impact-Factors/">Impact Factors</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Jekyll/">Jekyll</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/MATLAB/">MATLAB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Physics/">Physics</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/School/">School</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/TV/">TV</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/TsingHua/">TsingHua</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/VLC/">VLC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/basic/">basic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/blog/">blog</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/camping/">camping</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/chaos/">chaos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/coding/">coding</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/contest/">contest</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/css/">css</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/dream/">dream</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/education/">education</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/football/">football</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/games/">games</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/girl/">girl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/helloworld/">helloworld</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/html/">html</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/image/">image</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/innovation/">innovation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/js/">js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/latex/">latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/lifestyle/">lifestyle</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/movie/">movie</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/optics/">optics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/philosophy/">philosophy</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/project/">project</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/python/">python</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/reading/">reading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/review/">review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/roguelike/">roguelike</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/scripts/">scripts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/semiconductor/">semiconductor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/simulation/">simulation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/sports/">sports</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/test/">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/tools/">tools</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/cht/tags/volunteer/">volunteer</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/cht/tags/C/" style="font-size: 10px;">C#</a> <a href="/cht/tags/Description/" style="font-size: 10px;">Description</a> <a href="/cht/tags/Experiments/" style="font-size: 12px;">Experiments</a> <a href="/cht/tags/FPGA/" style="font-size: 10px;">FPGA</a> <a href="/cht/tags/GFW/" style="font-size: 10px;">GFW</a> <a href="/cht/tags/Git/" style="font-size: 10px;">Git</a> <a href="/cht/tags/Impact-Factors/" style="font-size: 10px;">Impact Factors</a> <a href="/cht/tags/Jekyll/" style="font-size: 12px;">Jekyll</a> <a href="/cht/tags/MATLAB/" style="font-size: 10px;">MATLAB</a> <a href="/cht/tags/Physics/" style="font-size: 16px;">Physics</a> <a href="/cht/tags/School/" style="font-size: 16px;">School</a> <a href="/cht/tags/TV/" style="font-size: 12px;">TV</a> <a href="/cht/tags/TsingHua/" style="font-size: 10px;">TsingHua</a> <a href="/cht/tags/VLC/" style="font-size: 10px;">VLC</a> <a href="/cht/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/cht/tags/basic/" style="font-size: 10px;">basic</a> <a href="/cht/tags/blog/" style="font-size: 16px;">blog</a> <a href="/cht/tags/camping/" style="font-size: 10px;">camping</a> <a href="/cht/tags/chaos/" style="font-size: 10px;">chaos</a> <a href="/cht/tags/code/" style="font-size: 10px;">code</a> <a href="/cht/tags/coding/" style="font-size: 16px;">coding</a> <a href="/cht/tags/contest/" style="font-size: 10px;">contest</a> <a href="/cht/tags/css/" style="font-size: 14px;">css</a> <a href="/cht/tags/dream/" style="font-size: 10px;">dream</a> <a href="/cht/tags/education/" style="font-size: 10px;">education</a> <a href="/cht/tags/football/" style="font-size: 12px;">football</a> <a href="/cht/tags/games/" style="font-size: 10px;">games</a> <a href="/cht/tags/girl/" style="font-size: 10px;">girl</a> <a href="/cht/tags/github/" style="font-size: 10px;">github</a> <a href="/cht/tags/helloworld/" style="font-size: 14px;">helloworld</a> <a href="/cht/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/cht/tags/html/" style="font-size: 18px;">html</a> <a href="/cht/tags/image/" style="font-size: 10px;">image</a> <a href="/cht/tags/innovation/" style="font-size: 10px;">innovation</a> <a href="/cht/tags/js/" style="font-size: 12px;">js</a> <a href="/cht/tags/latex/" style="font-size: 10px;">latex</a> <a href="/cht/tags/lifestyle/" style="font-size: 20px;">lifestyle</a> <a href="/cht/tags/movie/" style="font-size: 12px;">movie</a> <a href="/cht/tags/optics/" style="font-size: 10px;">optics</a> <a href="/cht/tags/philosophy/" style="font-size: 12px;">philosophy</a> <a href="/cht/tags/project/" style="font-size: 10px;">project</a> <a href="/cht/tags/python/" style="font-size: 16px;">python</a> <a href="/cht/tags/reading/" style="font-size: 12px;">reading</a> <a href="/cht/tags/review/" style="font-size: 10px;">review</a> <a href="/cht/tags/roguelike/" style="font-size: 10px;">roguelike</a> <a href="/cht/tags/scripts/" style="font-size: 10px;">scripts</a> <a href="/cht/tags/semiconductor/" style="font-size: 10px;">semiconductor</a> <a href="/cht/tags/shell/" style="font-size: 10px;">shell</a> <a href="/cht/tags/simulation/" style="font-size: 10px;">simulation</a> <a href="/cht/tags/sports/" style="font-size: 12px;">sports</a> <a href="/cht/tags/test/" style="font-size: 10px;">test</a> <a href="/cht/tags/tools/" style="font-size: 18px;">tools</a> <a href="/cht/tags/volunteer/" style="font-size: 10px;">volunteer</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://bbs.cloud.icybee.cn/s/article?t1=&au=yo1995&b=Cycling">Cycling</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.fuxuemingzhu.com/">负雪明烛</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://pengzhihui.xyz/">稚晖的个人站</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://icybee.cn/">IcyBee· Hacking the world!</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Chen Ting<br>
+            Proudly Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme <a href="https://github.com/ppoffice/hexo-theme-icarus">Icarus.</a> Modified by <a href="http://github.com/yo1995">yo1995</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'icarus-yo'};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+
+
+
+    
+        <script src="/cht/libs/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/cht/js/main.js"></script>
+
+    </div>
+</body>
+</html>
